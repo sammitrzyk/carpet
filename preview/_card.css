@@ -1,0 +1,43 @@
+/* Shared base for design-system preview cards. Each card is ~700×N with a
+   consistent canvas. We do NOT add titles inside the card — the asset name
+   shows outside. */
+@import url('../colors_and_type.css');
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html, body {
+  width: 700px;
+  background: var(--cg-cream);
+  color: var(--cg-fg-1);
+  font-family: var(--cg-body);
+  overflow: hidden;
+}
+body { padding: 28px; }
+.row { display: flex; gap: 12px; align-items: stretch; }
+.col { display: flex; flex-direction: column; gap: 12px; }
+.swatch {
+  flex: 1;
+  border-radius: var(--cg-r-md);
+  border: 1px solid var(--cg-line);
+  padding: 14px;
+  min-height: 88px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  font-family: var(--cg-body);
+  font-size: 12px;
+  line-height: 1.3;
+}
+.swatch .name { font-weight: 700; font-family: var(--cg-headline); }
+.swatch .hex { font-family: var(--cg-mono); opacity: 0.75; font-size: 11px; }
+.swatch.dark { color: var(--cg-fg-on-dark-1); border-color: rgba(255,255,255,0.10); }
+.swatch.dark .hex { opacity: 0.7; }
+.label-eyebrow {
+  font-family: var(--cg-headline);
+  font-size: 11px; font-weight: 700;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--cg-fg-3);
+  margin-bottom: 14px;
+  display: flex; align-items: center; gap: 8px;
+}
+.label-eyebrow::before { content: ""; width: 20px; height: 2px; background: var(--cg-green-deep); }

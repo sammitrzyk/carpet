@@ -1,0 +1,420 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Contact &amp; Book — Carpet Guys</title>
+  <meta name="description" content="Book a residential carpet cleaning online or request a commercial quote. Serving Central PA — Harrisburg, Mechanicsburg, Camp Hill, and surrounding areas.">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    @media (max-width: 900px) {
+      .nav__ctas      { display: none !important; }
+      .nav__links     { display: none !important; }
+      .nav__hamburger { display: flex !important; }
+    }
+    @media (min-width: 901px) {
+      .nav__hamburger { display: none !important; }
+    }
+    .contact-path-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+      max-width: 700px;
+      margin-top: 40px;
+    }
+    .contact-path-card {
+      display: block;
+      background: var(--c-paper);
+      border: 1px solid var(--c-border);
+      border-radius: var(--r-lg);
+      padding: 28px 26px 24px;
+      text-decoration: none;
+      color: inherit;
+      transition: box-shadow var(--dur) var(--ease), border-color var(--dur) var(--ease);
+    }
+    .contact-path-card:hover {
+      box-shadow: 0 6px 24px rgba(14,18,16,0.10);
+      border-color: rgba(16,19,18,0.22);
+    }
+    .contact-path-card__title {
+      font-family: var(--font);
+      font-weight: 800;
+      font-size: 20px;
+      color: var(--c-ink);
+      margin: 10px 0 8px;
+      letter-spacing: -0.015em;
+    }
+    .contact-path-card__copy {
+      font-size: 14px;
+      color: var(--c-muted);
+      line-height: 1.6;
+      margin: 0 0 18px;
+    }
+    .contact-path-card__cta {
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-green-d);
+      letter-spacing: 0.01em;
+    }
+    .contact-page-h1 {
+      font-family: var(--font);
+      font-weight: 800;
+      font-size: clamp(30px, 4vw, 50px);
+      line-height: 1.1;
+      letter-spacing: -0.025em;
+      color: var(--c-ink);
+      margin: 0 0 16px;
+      max-width: 24ch;
+    }
+    .contact-page-lead {
+      font-size: 17px;
+      color: var(--c-muted);
+      line-height: 1.65;
+      max-width: 56ch;
+      margin: 0;
+    }
+    @media (max-width: 600px) {
+      .contact-path-cards { grid-template-columns: 1fr; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--light" id="site-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../../assets/logo.png" alt="Carpet Guys logo">
+      <span class="nav__logo-name">Carpet <span>Guys</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="upholstery.html">Upholstery</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="contact.html" class="active">Contact</a></li>
+    </ul>
+    <div class="nav__ctas">
+      <a href="tel:7177012797" class="btn btn-outline btn-sm hide-mobile">(717) 701-2797</a>
+      <a href="#book" class="btn btn-green btn-sm">Request a Quote</a>
+    </div>
+    <button class="nav__hamburger" id="mobile-hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav__drawer" id="mobile-drawer" aria-hidden="true">
+  <nav class="nav__drawer-links">
+    <a href="index.html">Home</a>
+    <a href="carpet-cleaning.html">Carpet Cleaning</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="upholstery.html">Upholstery</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html" class="active">Contact</a>
+  </nav>
+  <div class="nav__drawer-divider"></div>
+  <div class="nav__drawer-ctas">
+    <a href="tel:7177012797" class="btn btn-outline btn-sm">(717) 701-2797</a>
+    <a href="#book" class="btn btn-green btn-sm">Request a Quote</a>
+  </div>
+</div>
+
+<!-- PAGE INTRO -->
+<section class="section section--cream" style="padding-top:88px;">
+  <div class="container">
+    <div class="eyebrow">Contact &amp; Book</div>
+    <h1 class="contact-page-h1">Two ways forward — book online or request a quote.</h1>
+    <p class="contact-page-lead">Know your package? Book online and we'll confirm a time. Not sure what your space needs, or it's commercial? Request a quote and we'll come back same-day.</p>
+    <div class="contact-path-cards">
+      <a href="#book" class="contact-path-card">
+        <div class="eyebrow" style="font-size:10px;margin-bottom:0;">For homes</div>
+        <div class="contact-path-card__title">Book Online</div>
+        <p class="contact-path-card__copy">Pick a package, pick a date, you're scheduled.</p>
+        <span class="contact-path-card__cta">Book Online →</span>
+      </a>
+      <a href="#quote" class="contact-path-card">
+        <div class="eyebrow" style="font-size:10px;margin-bottom:0;">For commercial &amp; custom jobs</div>
+        <div class="contact-path-card__title">Request a Quote</div>
+        <p class="contact-path-card__copy">For commercial, recurring, large rugs, severe pet odor, or unclear square footage.</p>
+        <span class="contact-path-card__cta">Request Quote →</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- BOOK ONLINE -->
+<section class="quote-section" id="book">
+  <div class="container">
+    <div class="quote-layout">
+      <div class="quote-info">
+        <div class="eyebrow eyebrow--light">Book Online</div>
+        <h2 class="quote-h2">Book a residential cleaning.</h2>
+        <p class="quote-lead">Pick your package and preferred date. We'll call to confirm a time window — most residential jobs scheduled within 48 hours.</p>
+        <div class="quote-contact">
+          <div class="quote-contact-item">
+            <strong>Phone</strong>
+            <a href="tel:7177012797">(717) 701-2797</a>
+          </div>
+          <div class="quote-contact-item">
+            <strong>Area</strong>
+            <span style="font-size:15px;color:rgba(255,255,255,0.72);">Harrisburg · Mechanicsburg · Central PA</span>
+          </div>
+        </div>
+      </div>
+      <form class="quote-form-inner" action="#" method="post" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="b-name">Name</label>
+            <input id="b-name" type="text" name="name" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="b-phone">Phone</label>
+            <input id="b-phone" type="tel" name="phone" placeholder="(717) 000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="b-address">Address</label>
+            <input id="b-address" type="text" name="address" placeholder="123 Maple St, Camp Hill" autocomplete="street-address">
+          </div>
+          <div class="form-field">
+            <label for="b-zip">ZIP</label>
+            <input id="b-zip" type="text" name="zip" placeholder="17011" autocomplete="postal-code">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="b-package">Choose package</label>
+          <select id="b-package" name="package">
+            <option>Value — $50/area · $150 min</option>
+            <option selected>Standard — $60/area</option>
+            <option>Pet Premium — $70/area</option>
+            <option>Protector — $80/area</option>
+          </select>
+        </div>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="b-areas">Number of areas</label>
+            <select id="b-areas" name="areas">
+              <option>3 areas</option>
+              <option>4 areas</option>
+              <option>5 areas</option>
+              <option>6+ areas</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="b-date">Preferred date</label>
+            <input id="b-date" type="date" name="date">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="b-addons">Add-ons or notes (optional)</label>
+          <textarea id="b-addons" name="addons" placeholder="Rapid dry, dryer vent cleaning, area rug, sofa…"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green btn-lg" style="width:100%;">Confirm Booking</button>
+        <p style="margin:12px 0 0;font-size:13px;color:rgba(255,255,255,0.30);text-align:center;">Or call directly: <a href="tel:7177012797" style="color:rgba(255,255,255,0.52);">(717) 701-2797</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- REQUEST A QUOTE -->
+<section class="quote-section" id="quote" style="background:var(--c-ink);border-top:1px solid rgba(255,255,255,0.06);">
+  <div class="container">
+    <div class="quote-layout">
+      <div class="quote-info">
+        <div class="eyebrow eyebrow--light">Request a Quote</div>
+        <h2 class="quote-h2">Request a commercial or custom quote.</h2>
+        <p class="quote-lead">For commercial spaces, recurring service, large rugs, severe pet odor, carpet stretching, or property-management portfolios.</p>
+        <div class="quote-contact">
+          <div class="quote-contact-item">
+            <strong>Phone</strong>
+            <a href="tel:7177012797">(717) 701-2797</a>
+          </div>
+          <div class="quote-contact-item">
+            <strong>Response</strong>
+            <span style="font-size:15px;color:rgba(255,255,255,0.72);">Same-day on weekdays</span>
+          </div>
+        </div>
+      </div>
+      <form class="quote-form-inner" action="#" method="post" novalidate>
+        <div class="form-row">
+          <div class="form-field">
+            <label for="q-name">Name</label>
+            <input id="q-name" type="text" name="name" placeholder="Your name" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="q-phone">Phone</label>
+            <input id="q-phone" type="tel" name="phone" placeholder="(717) 000-0000" autocomplete="tel">
+          </div>
+        </div>
+        <div class="form-field">
+          <label for="q-type">Business / property type</label>
+          <select id="q-type" name="type">
+            <option value="">Select one</option>
+            <option>Office</option>
+            <option>Apartment / property management</option>
+            <option>Church / facility</option>
+            <option>Retail</option>
+            <option>Residential — large or custom</option>
+          </select>
+        </div>
+        <div class="form-field">
+          <label for="q-city">City / ZIP</label>
+          <input id="q-city" type="text" name="city" placeholder="Harrisburg, 17101">
+        </div>
+        <div class="form-field">
+          <label for="q-desc">Describe the space</label>
+          <textarea id="q-desc" name="description" placeholder="Approx square footage, traffic level, carpet condition, scheduling notes"></textarea>
+        </div>
+        <button type="submit" class="btn btn-green btn-lg" style="width:100%;">Request Quote</button>
+        <p style="margin:12px 0 0;font-size:13px;color:rgba(255,255,255,0.30);text-align:center;">Or call directly: <a href="tel:7177012797" style="color:rgba(255,255,255,0.52);">(717) 701-2797</a></p>
+      </form>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICE AREA -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="eyebrow">Service Area</div>
+    <h2 style="font-family:var(--font);font-weight:700;font-size:clamp(24px,3vw,36px);line-height:1.1;letter-spacing:-0.02em;color:var(--c-ink);margin:0 0 24px;">Carpet cleaning across Central PA.</h2>
+    <div class="city-cloud" style="margin-bottom:20px;">
+      <span class="city-chip">Harrisburg</span>
+      <span class="city-chip">Lemoyne</span>
+      <span class="city-chip">Camp Hill</span>
+      <span class="city-chip">Mechanicsburg</span>
+      <span class="city-chip">New Cumberland</span>
+      <span class="city-chip">Enola</span>
+      <span class="city-chip">Carlisle</span>
+      <span class="city-chip">Hershey</span>
+      <span class="city-chip">Middletown</span>
+      <span class="city-chip">York</span>
+      <span class="city-chip">Lancaster</span>
+    </div>
+    <p style="font-size:14px;color:var(--c-muted);">Outside this area? Call us anyway — we'll let you know.</p>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">Carpet <span>Guys</span></div>
+        <p class="footer__tag">Flat prices for homes. Clear quotes for businesses. Locally owned carpet cleaning in Central PA.</p>
+        <div class="footer__phone">(717) 701-2797</div>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-green btn-sm">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-sm">Request Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="carpet-cleaning.html">Residential carpet cleaning</a></li>
+          <li><a href="commercial.html">Commercial carpet cleaning</a></li>
+          <li><a href="upholstery.html">Upholstery cleaning</a></li>
+          <li><a href="carpet-cleaning.html#addons">Pet treatment</a></li>
+          <li><a href="carpet-cleaning.html#addons">Area rugs</a></li>
+          <li><a href="carpet-cleaning.html#addons">Dryer vent cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book Online</a></li>
+          <li><a href="contact.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Service Area</div>
+        <ul class="footer__links">
+          <li><a href="#">Harrisburg</a></li>
+          <li><a href="#">Camp Hill</a></li>
+          <li><a href="#">Mechanicsburg</a></li>
+          <li><a href="#">Lemoyne</a></li>
+          <li><a href="#">Carlisle</a></li>
+          <li><a href="#">Hershey</a></li>
+          <li><a href="#">York</a></li>
+          <li><a href="#">Lancaster</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Carpet Guys · Central Pennsylvania · Voted Best of Harrisburg 2023</span>
+      <span>(717) 701-2797</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:7177012797" class="btn btn-ghost">Call Now</a>
+  <a href="#book" class="btn btn-green">Request Quote</a>
+</div>
+
+<script>
+// Mobile hamburger
+(function() {
+  var btn = document.getElementById('mobile-hamburger');
+  var drawer = document.getElementById('mobile-drawer');
+  if (!btn || !drawer) return;
+  function close() {
+    drawer.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (drawer.classList.contains('open')) { close(); } else {
+      drawer.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+  });
+  drawer.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', close);
+  });
+  document.addEventListener('click', function(e) {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && e.target !== btn) {
+      close();
+    }
+  });
+})();
+
+(function(){
+  var bar = document.querySelector('.mobile-bar');
+  if (!bar) return;
+  document.addEventListener('focusin', function(e) {
+    if (e.target.matches('input, textarea, select')) bar.style.transform = 'translateY(110%)';
+  });
+  document.addEventListener('focusout', function() {
+    setTimeout(function() { bar.style.transform = ''; }, 250);
+  });
+})();
+</script>
+<script>
+// Mobile sticky bar — reveal after scroll
+(function () {
+  var bar = document.querySelector('.mobile-bar');
+  if (!bar) return;
+  function update() {
+    var scrolled = window.scrollY > 180;
+    var drawerOpen = !!document.querySelector('.nav__drawer.open');
+    bar.classList.toggle('is-visible', scrolled && !drawerOpen);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  var drawer = document.querySelector('.nav__drawer');
+  if (drawer) new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+  update();
+})();
+</script>
+</body>
+</html>

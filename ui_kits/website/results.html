@@ -1,0 +1,543 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Results &amp; Gallery | Carpet Guys</title>
+  <meta name="description" content="Real cleaning results from Carpet Guys jobs across Central PA. Before and after photos of carpet cleaning, upholstery, commercial work, and stain treatment.">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    @media (max-width: 900px) {
+      .nav__ctas      { display: none !important; }
+      .nav__links     { display: none !important; }
+      .nav__hamburger { display: flex !important; }
+    }
+    @media (min-width: 901px) {
+      .nav__hamburger { display: none !important; }
+    }
+
+    /* ── Gallery Hero ── */
+    .rg-hero {
+      padding: 88px 0 60px;
+      background: var(--c-paper);
+      border-bottom: 1px solid var(--c-border);
+    }
+    .rg-hero__h1 {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(28px, 3.6vw, 46px);
+      line-height: 1.07;
+      letter-spacing: -0.022em;
+      color: var(--c-ink);
+      margin: 12px 0 16px;
+      max-width: 20ch;
+    }
+    .rg-hero__body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 17px;
+      color: var(--c-muted);
+      line-height: 1.65;
+      margin: 0 0 28px;
+      max-width: 54ch;
+    }
+    .rg-hero__ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+    }
+
+    /* ── Filters ── */
+    .rg-filters {
+      background: var(--c-paper);
+      padding: 28px 0 24px;
+      border-bottom: 1px solid var(--c-border);
+    }
+    .rg-filter-scroll {
+      display: flex;
+      gap: 8px;
+      overflow-x: auto;
+      scrollbar-width: none;
+      -webkit-overflow-scrolling: touch;
+    }
+    .rg-filter-scroll::-webkit-scrollbar { display: none; }
+    .rg-pill {
+      flex-shrink: 0;
+      padding: 8px 18px;
+      border-radius: 100px;
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      font-weight: 700;
+      border: 1.5px solid rgba(16,19,18,0.18);
+      background: transparent;
+      cursor: pointer;
+      color: var(--c-muted);
+      transition: border-color 140ms ease, background 140ms ease, color 140ms ease;
+      white-space: nowrap;
+    }
+    .rg-pill:hover { border-color: var(--c-ink); color: var(--c-ink); }
+    .rg-pill.active { background: var(--c-ink); border-color: var(--c-ink); color: #fff; }
+
+    /* ── Gallery ── */
+    .rg-gallery-section {
+      padding: 36px 0 96px;
+      background: var(--c-paper);
+    }
+    .rg-count {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      color: var(--c-muted);
+      margin-bottom: 24px;
+    }
+    .rg-masonry {
+      column-count: 3;
+      column-gap: 14px;
+    }
+    .rg-item {
+      break-inside: avoid;
+      margin-bottom: 14px;
+      position: relative;
+      cursor: zoom-in;
+      border-radius: 16px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(16,19,18,0.07), 0 4px 14px rgba(16,19,18,0.06);
+      transition: box-shadow 160ms ease, transform 160ms ease;
+    }
+    .rg-item:hover { box-shadow: 0 4px 12px rgba(16,19,18,0.10), 0 12px 32px rgba(16,19,18,0.10); transform: translateY(-2px); }
+    .rg-item img {
+      width: 100%;
+      display: block;
+      border-radius: 0;
+    }
+    .rg-item__label {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: rgba(16,19,18,0.60);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      color: rgba(255,255,255,0.92);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      padding: 4px 8px;
+      border-radius: 6px;
+      pointer-events: none;
+    }
+    .rg-item.hidden { display: none; }
+
+    /* Empty state */
+    .rg-empty {
+      display: none;
+      text-align: center;
+      padding: 64px 0;
+      color: var(--c-muted);
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 16px;
+    }
+
+    /* ── Bottom CTA ── */
+    .rg-cta {
+      background: var(--c-cream);
+      border-top: 1px solid var(--c-border);
+      padding: 72px 0;
+      text-align: center;
+    }
+    .rg-cta__h2 {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(24px, 3vw, 38px);
+      line-height: 1.10;
+      letter-spacing: -0.020em;
+      color: var(--c-ink);
+      margin: 0 0 14px;
+    }
+    .rg-cta__body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 17px;
+      color: var(--c-muted);
+      line-height: 1.60;
+      max-width: 52ch;
+      margin: 0 auto 28px;
+    }
+    .rg-cta__btns {
+      display: flex;
+      gap: 12px;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    /* ── Lightbox ── */
+    .rg-lb {
+      display: none;
+      position: fixed;
+      inset: 0;
+      z-index: 9999;
+      background: rgba(8,10,8,0.92);
+      align-items: center;
+      justify-content: center;
+      padding: 20px;
+    }
+    .rg-lb.open { display: flex; }
+    .rg-lb__img {
+      max-width: 100%;
+      max-height: 90vh;
+      border-radius: 12px;
+      object-fit: contain;
+      box-shadow: 0 24px 80px rgba(0,0,0,0.50);
+    }
+    .rg-lb__close {
+      position: fixed;
+      top: 16px;
+      right: 16px;
+      background: rgba(255,255,255,0.12);
+      border: 1px solid rgba(255,255,255,0.18);
+      color: rgba(255,255,255,0.90);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      font-size: 22px;
+      line-height: 1;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition: background 140ms ease;
+    }
+    .rg-lb__close:hover { background: rgba(255,255,255,0.22); }
+
+    /* ── Responsive ── */
+    @media (max-width: 768px) {
+      .rg-hero { padding: 64px 0 48px; }
+      .rg-hero__body { font-size: 16px; }
+      .rg-hero__ctas .btn { width: 100%; justify-content: center; }
+      .rg-hero__ctas { flex-direction: column; max-width: 320px; }
+      .rg-masonry { column-count: 1; column-gap: 0; }
+      .rg-item { margin-bottom: 20px; border-radius: 18px; }
+      .rg-gallery-section { padding: 24px 0 80px; }
+      .rg-cta { padding: 56px 0; }
+    }
+    @media (min-width: 769px) and (max-width: 1024px) {
+      .rg-masonry { column-count: 2; column-gap: 14px; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--light" id="site-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../../assets/logo.png" alt="Carpet Guys logo">
+      <span class="nav__logo-name">Carpet <span>Guys</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="upholstery.html">Upholstery</a></li>
+      <li><a href="results.html" class="active">Results</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__ctas">
+      <a href="tel:7177012797" class="btn btn-ghost btn-sm">(717) 701-2797</a>
+      <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+    </div>
+    <button class="nav__hamburger" id="mobile-hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav__drawer" id="mobile-drawer" aria-hidden="true">
+  <nav class="nav__drawer-links">
+    <a href="index.html">Home</a>
+    <a href="carpet-cleaning.html">Carpet Cleaning</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="upholstery.html">Upholstery</a>
+    <a href="results.html" class="active">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav__drawer-divider"></div>
+  <div class="nav__drawer-ctas">
+    <a href="tel:7177012797" class="btn btn-outline btn-sm">(717) 701-2797</a>
+    <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+  </div>
+</div>
+
+<!-- HERO -->
+<section class="rg-hero">
+  <div class="container">
+    <div class="eyebrow">Results</div>
+    <h1 class="rg-hero__h1">Real cleaning results from local jobs.</h1>
+    <p class="rg-hero__body">Browse carpet cleaning, upholstery, commercial work, stain treatment, and before-and-after photos from Carpet Guys jobs around Central PA.</p>
+    <div class="rg-hero__ctas">
+      <a href="contact.html" class="btn btn-green btn-lg">Book Online</a>
+      <a href="tel:7177012797" class="btn btn-outline btn-lg">(717) 701-2797</a>
+    </div>
+  </div>
+</section>
+
+<!-- FILTERS -->
+<section class="rg-filters">
+  <div class="container">
+    <div class="rg-filter-scroll" role="group" aria-label="Filter gallery by category">
+      <button class="rg-pill active" data-cat="all">All</button>
+      <button class="rg-pill" data-cat="carpet">Carpet</button>
+      <button class="rg-pill" data-cat="upholstery">Upholstery</button>
+      <button class="rg-pill" data-cat="commercial">Commercial</button>
+      <button class="rg-pill" data-cat="stains">Stains</button>
+      <button class="rg-pill" data-cat="before-after">Before &amp; After</button>
+    </div>
+  </div>
+</section>
+
+<!-- GALLERY -->
+<section class="rg-gallery-section">
+  <div class="container">
+    <p class="rg-count" id="rg-count"></p>
+    <div class="rg-masonry" id="rg-gallery"></div>
+    <p class="rg-empty" id="rg-empty">No photos in this category yet.</p>
+  </div>
+</section>
+
+<!-- BOTTOM CTA -->
+<section class="rg-cta">
+  <div class="container">
+    <h2 class="rg-cta__h2">Like what you see?</h2>
+    <p class="rg-cta__body">Book carpet, upholstery, stain treatment, or commercial cleaning with a local team backed by 244+ Google reviews.</p>
+    <div class="rg-cta__btns">
+      <a href="contact.html" class="btn btn-green btn-lg">Book Online</a>
+      <a href="tel:7177012797" class="btn btn-outline btn-lg">(717) 701-2797</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">Carpet <span>Guys</span></div>
+        <p class="footer__tag">Flat prices for homes. Clear quotes for businesses. Locally owned carpet cleaning in Central PA.</p>
+        <div class="footer__phone">(717) 701-2797</div>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-green btn-sm">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-sm">Request Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="carpet-cleaning.html">Residential carpet cleaning</a></li>
+          <li><a href="commercial.html">Commercial carpet cleaning</a></li>
+          <li><a href="upholstery.html">Upholstery cleaning</a></li>
+          <li><a href="carpet-cleaning.html#addons">Pet treatment</a></li>
+          <li><a href="carpet-cleaning.html#addons">Area rugs</a></li>
+          <li><a href="carpet-cleaning.html#addons">Dryer vent cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book Online</a></li>
+          <li><a href="contact.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Service Area</div>
+        <ul class="footer__links">
+          <li><a href="#">Harrisburg</a></li>
+          <li><a href="#">Camp Hill</a></li>
+          <li><a href="#">Mechanicsburg</a></li>
+          <li><a href="#">Lemoyne</a></li>
+          <li><a href="#">Carlisle</a></li>
+          <li><a href="#">Hershey</a></li>
+          <li><a href="#">York</a></li>
+          <li><a href="#">Lancaster</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Carpet Guys · Central Pennsylvania · Voted Best of Harrisburg 2023</span>
+      <span>(717) 701-2797</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:7177012797" class="btn btn-ghost">Call</a>
+  <a href="contact.html" class="btn btn-green">Request Quote</a>
+</div>
+
+<!-- LIGHTBOX -->
+<div class="rg-lb" id="rg-lightbox" role="dialog" aria-modal="true" aria-label="Photo viewer">
+  <button class="rg-lb__close" id="rg-lb-close" aria-label="Close">&#x2715;</button>
+  <img class="rg-lb__img" id="rg-lb-img" src="" alt="">
+</div>
+
+<script src="gallery-manifest.js"></script>
+
+<script>
+// ── Build gallery DOM ──
+// Image data lives in gallery-manifest.js (GALLERY_IMAGES).
+// To add new photos: drop files in uploads/ or assets/, then run:
+//   python3 gallery-update.py
+(function () {
+  var gallery = document.getElementById('rg-gallery');
+  var countEl = document.getElementById('rg-count');
+
+  GALLERY_IMAGES.forEach(function (img) {
+    var item = document.createElement('div');
+    item.className = 'rg-item';
+    item.dataset.cat = img.cat;
+    item.setAttribute('tabindex', '0');
+    item.setAttribute('role', 'button');
+    item.setAttribute('aria-label', 'View: ' + img.alt);
+
+    var image = document.createElement('img');
+    image.src = img.src;
+    image.alt = img.alt;
+    image.loading = 'lazy';
+    image.decoding = 'async';
+
+    var label = document.createElement('span');
+    label.className = 'rg-item__label';
+    label.textContent = img.label;
+
+    item.appendChild(image);
+    item.appendChild(label);
+    gallery.appendChild(item);
+  });
+
+  countEl.textContent = GALLERY_IMAGES.length + ' photos';
+})();
+
+// ── Filters ──
+(function () {
+  var pills  = document.querySelectorAll('.rg-pill');
+  var items  = document.querySelectorAll('.rg-item');
+  var countEl = document.getElementById('rg-count');
+  var emptyEl = document.getElementById('rg-empty');
+
+  function applyFilter(cat) {
+    var visible = 0;
+    items.forEach(function (item) {
+      var match = (cat === 'all') || (item.dataset.cat === cat);
+      item.classList.toggle('hidden', !match);
+      if (match) visible++;
+    });
+    countEl.textContent = visible + ' photo' + (visible === 1 ? '' : 's');
+    emptyEl.style.display = visible === 0 ? 'block' : 'none';
+  }
+
+  pills.forEach(function (pill) {
+    pill.addEventListener('click', function () {
+      pills.forEach(function (p) { p.classList.remove('active'); });
+      pill.classList.add('active');
+      applyFilter(pill.dataset.cat);
+    });
+  });
+})();
+
+// ── Lightbox ──
+(function () {
+  var lb     = document.getElementById('rg-lightbox');
+  var lbImg  = document.getElementById('rg-lb-img');
+  var lbClose = document.getElementById('rg-lb-close');
+
+  function open(src, alt) {
+    lbImg.src = src;
+    lbImg.alt = alt;
+    lb.classList.add('open');
+    document.body.style.overflow = 'hidden';
+  }
+
+  function close() {
+    lb.classList.remove('open');
+    lbImg.src = '';
+    document.body.style.overflow = '';
+  }
+
+  document.getElementById('rg-gallery').addEventListener('click', function (e) {
+    var item = e.target.closest('.rg-item');
+    if (!item || item.classList.contains('hidden')) return;
+    var img = item.querySelector('img');
+    open(img.src, img.alt);
+  });
+
+  document.getElementById('rg-gallery').addEventListener('keydown', function (e) {
+    if (e.key !== 'Enter' && e.key !== ' ') return;
+    var item = e.target.closest('.rg-item');
+    if (!item) return;
+    var img = item.querySelector('img');
+    open(img.src, img.alt);
+  });
+
+  lbClose.addEventListener('click', close);
+  lb.addEventListener('click', function (e) { if (e.target === lb) close(); });
+  document.addEventListener('keydown', function (e) { if (e.key === 'Escape') close(); });
+})();
+
+// ── Mobile hamburger ──
+(function () {
+  var btn    = document.getElementById('mobile-hamburger');
+  var drawer = document.getElementById('mobile-drawer');
+  if (!btn || !drawer) return;
+
+  function close() {
+    drawer.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+
+  btn.addEventListener('click', function (e) {
+    e.stopPropagation();
+    if (drawer.classList.contains('open')) {
+      close();
+    } else {
+      drawer.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+  });
+
+  drawer.querySelectorAll('a').forEach(function (link) { link.addEventListener('click', close); });
+
+  document.addEventListener('click', function (e) {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && e.target !== btn) {
+      close();
+    }
+  });
+})();
+
+// ── Mobile sticky bar — reveal after scroll ──
+(function () {
+  var bar    = document.querySelector('.mobile-bar');
+  var drawer = document.querySelector('.nav__drawer');
+  if (!bar) return;
+
+  function update() {
+    var scrolled    = window.scrollY > 180;
+    var drawerOpen  = !!document.querySelector('.nav__drawer.open');
+    bar.classList.toggle('is-visible', scrolled && !drawerOpen);
+  }
+
+  window.addEventListener('scroll', update, { passive: true });
+  if (drawer) new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+  update();
+})();
+</script>
+
+</body>
+</html>

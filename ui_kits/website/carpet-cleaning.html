@@ -1,0 +1,1978 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Carpet Cleaning in Central PA | Carpet Guys</title>
+  <meta name="description" content="Flat-rate carpet cleaning in Central PA from Carpet Guys. Book per-area packages for rooms, stairs, hallways, traffic lanes, pet issues, and everyday buildup.">
+  <link rel="icon" href="../../assets/favicon.ico">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@600;700&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    @media (max-width: 900px) {
+      .nav__ctas      { display: none !important; }
+      .nav__links     { display: none !important; }
+      .nav__hamburger { display: flex !important; }
+    }
+    @media (min-width: 901px) {
+      .nav__hamburger { display: none !important; }
+    }
+    /* ── Hero ── */
+    .cc-hero {
+      position: relative;
+      height: 720px;
+      display: flex;
+      align-items: flex-end;
+      overflow: hidden;
+    }
+    .cc-hero::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../../uploads/sunroom.jpg') center 55% / cover no-repeat;
+      z-index: 0;
+    }
+    .cc-hero::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        /* Subtle cream warmth at very bottom — softens the edge, hands off to next section */
+        linear-gradient(to top,
+          rgba(242,237,227,0.22) 0%,
+          rgba(242,237,227,0.05) 5%,
+          transparent 11%
+        ),
+        /* Warm green-charcoal tint behind text area */
+        linear-gradient(to right,
+          rgba(22,38,26,0.14) 0%,
+          transparent 54%
+        ),
+        /* Primary readability gradient */
+        linear-gradient(to right,
+          rgba(14,20,16,0.56) 0%,
+          rgba(14,20,16,0.44) 26%,
+          rgba(14,20,16,0.24) 48%,
+          rgba(14,20,16,0.07) 68%,
+          transparent 84%
+        ),
+        /* Bottom vignette — lands the hero */
+        linear-gradient(to top,
+          rgba(14,20,16,0.22) 0%,
+          transparent 22%
+        ),
+        /* Soft top edge under nav */
+        linear-gradient(to bottom,
+          rgba(14,20,16,0.10) 0%,
+          transparent 12%
+        );
+    }
+    .cc-hero > .container {
+      position: relative;
+      z-index: 2;
+      padding-bottom: 108px;
+    }
+    .cc-hero__content {
+      max-width: 700px;
+    }
+    .cc-hero__h1 {
+      font-family: 'Manrope', system-ui, sans-serif;
+      font-weight: 700;
+      font-size: clamp(26px, 3.4vw, 46px);
+      line-height: 1.06;
+      letter-spacing: -0.02em;
+      color: #fff;
+      margin: 10px 0 20px;
+      max-width: 720px;
+    }
+    .cc-hero__body {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 17px;
+      color: rgba(255,255,255,0.80);
+      line-height: 1.70;
+      margin: 0 0 28px;
+      max-width: 50ch;
+    }
+    .cc-hero__ctas {
+      display: flex;
+      gap: 12px;
+      flex-wrap: wrap;
+      margin-bottom: 24px;
+    }
+    .cc-hero__trust {
+      font-family: 'Source Sans 3', sans-serif;
+      font-size: 13px;
+      color: rgba(255,255,255,0.78);
+      line-height: 1.5;
+      background: rgba(255,255,255,0.07);
+      display: inline-block;
+      padding: 5px 12px;
+      border-radius: 6px;
+    }
+    .cc-hero__btn-outline {
+      display: inline-flex;
+      align-items: center;
+      padding: 13px 24px;
+      border: 1.5px solid rgba(255,255,255,0.36);
+      border-radius: var(--r-md);
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 15px;
+      color: rgba(255,255,255,0.88);
+      background: rgba(255,255,255,0.08);
+      text-decoration: none;
+      transition: border-color var(--dur) var(--ease), background var(--dur) var(--ease);
+      white-space: nowrap;
+    }
+    .cc-hero__btn-outline:hover {
+      border-color: rgba(255,255,255,0.58);
+      background: rgba(255,255,255,0.14);
+      color: #fff;
+    }
+    /* Mobile-only elements hidden on desktop */
+    .cc-hero__body--mobile { display: none; }
+    .cc-hero__trust-br     { display: none; }
+
+    /* ── Common Carpet Problems — diagnostic spotlight ── */
+
+    .cc-problems-section {
+      position: relative;
+      padding: 68px 0 96px;
+      background:
+        radial-gradient(ellipse 62% 72% at 50% 52%, rgba(109,190,69,0.16) 0%, transparent 58%),
+        radial-gradient(ellipse 48% 55% at -2% 100%, rgba(184,146,78,0.09) 0%, transparent 52%),
+        radial-gradient(ellipse 100% 100% at 50% 50%, transparent 38%, rgba(14,11,8,0.13) 100%),
+        #F4F0E6;
+    }
+
+    .cc-problems-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../../assets/petstaina.jpg') center / cover no-repeat;
+      opacity: 0.10;
+      filter: blur(1px) saturate(0.32) brightness(1.05);
+      z-index: 0;
+      pointer-events: none;
+    }
+
+    .cc-problems-section > .container {
+      position: relative;
+      z-index: 1;
+      max-width: 1320px;
+      padding: 0 clamp(16px, 3vw, 36px);
+    }
+
+    .cc-problems-panel {
+      position: relative;
+      width: 100%;
+      max-width: 1220px;
+      margin: 0 auto;
+      border-radius: 32px;
+      overflow: hidden;
+      min-height: 362px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      align-items: start;
+      box-shadow:
+        0 0 0 1px rgba(14,11,8,0.20),
+        0 12px 48px rgba(14,11,8,0.26),
+        0 32px 80px rgba(14,11,8,0.18),
+        0 0 100px rgba(109,190,69,0.09);
+    }
+
+    .cc-problems-panel::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: url('../../assets/petstaina.jpg') 65% center / cover no-repeat;
+      filter: brightness(0.78) saturate(0.65);
+      z-index: 0;
+    }
+
+    .cc-problems-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      z-index: 1;
+      background:
+        radial-gradient(ellipse 58% 70% at 74% 30%, rgba(184,146,78,0.10) 0%, transparent 55%),
+        linear-gradient(to right, rgba(10,7,4,0.60) 0%, rgba(10,7,4,0.22) 42%, rgba(10,7,4,0.04) 60%, transparent 72%),
+        radial-gradient(ellipse 86% 80% at 50% 50%, transparent 20%, rgba(6,4,2,0.58) 100%),
+        rgba(14,10,6,0.34);
+    }
+
+    .cc-problems-copy {
+      position: relative;
+      z-index: 2;
+      padding: 60px 36px 56px 60px;
+    }
+
+    .cc-problems-h2 {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: clamp(22px, 2.4vw, 34px);
+      line-height: 1.12;
+      letter-spacing: -0.022em;
+      color: #fff;
+      margin: 0 0 18px;
+      max-width: 16ch;
+    }
+
+    .cc-problems-body {
+      font-size: 16px;
+      color: rgba(255,255,255,0.68);
+      line-height: 1.72;
+      max-width: 38ch;
+      margin: 0;
+    }
+
+    .cc-problems-callouts {
+      position: relative;
+      z-index: 2;
+      padding: 76px 52px 52px 20px;
+      display: flex;
+      align-items: flex-start;
+    }
+
+    .cc-problem-list {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      width: 100%;
+      max-width: 440px;
+    }
+
+    .cc-problem-item {
+      background: rgba(236,228,204,0.78);
+      border: 1px solid rgba(14,11,8,0.07);
+      border-radius: 12px;
+      padding: 20px 24px;
+      box-shadow: 0 2px 10px rgba(10,7,4,0.11), 0 1px 2px rgba(10,7,4,0.07);
+    }
+
+    .cc-problem-title {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 14.5px;
+      color: #1a1814;
+      margin: 0 0 6px;
+      line-height: 1.3;
+    }
+
+    .cc-problem-title::before {
+      content: '';
+      width: 3px;
+      height: 14px;
+      background: var(--c-green-d);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .cc-problem-desc {
+      font-size: 13px;
+      color: rgba(42,36,28,0.72);
+      line-height: 1.55;
+      margin: 0;
+      padding-left: 13px;
+    }
+
+    /* ── Hero → next section breathing room ── */
+    .cc-section-break {
+      display: none;
+    }
+
+    /* ── How It Works — process video background ── */
+    .method-section {
+      position: relative;
+      background: #F8F6F0;
+      padding: 100px 0;
+      overflow: visible;
+    }
+
+    /* Suppress site.css dirty.jpg pseudo-elements */
+    .method-section::before,
+    .method-section::after {
+      display: none !important;
+    }
+
+    /* Top row: left copy ~42%, right video ~58% */
+    .method-section .method-layout {
+      grid-template-columns: 1fr 1.38fr;
+      align-items: center;
+    }
+
+    .method-section .method-body {
+      color: rgba(16, 18, 14, 0.68);
+      line-height: 1.72;
+      word-spacing: normal;
+      letter-spacing: normal;
+      hyphens: none;
+    }
+
+    /* Right column: video + caption */
+    .cc-method-right {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cc-video-panel {
+      position: relative;
+      border-radius: 18px;
+      overflow: hidden;
+      aspect-ratio: 16 / 9;
+      background: #1a1714;
+      box-shadow:
+        0 0 0 1px rgba(14, 11, 7, 0.09),
+        0 4px 16px rgba(14, 11, 7, 0.11),
+        0 18px 48px rgba(14, 11, 7, 0.10);
+    }
+
+    .cc-video-panel video {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 32%;
+      display: block;
+    }
+
+    .cc-video-panel::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        radial-gradient(ellipse 110% 60% at 50% 100%, rgba(14, 11, 7, 0.20) 0%, transparent 60%),
+        radial-gradient(ellipse 100% 40% at 50% 0%, rgba(14, 11, 7, 0.10) 0%, transparent 55%);
+      pointer-events: none;
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .cc-video-panel video { display: none; }
+      .cc-video-panel { background: url('../../uploads/dirty.jpg') center 40% / cover; }
+    }
+
+    .cc-video-caption {
+      margin-top: 12px;
+      padding-left: 2px;
+    }
+
+    .cc-video-caption__title {
+      font-family: var(--font);
+      font-size: 12px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 3px;
+      letter-spacing: 0.01em;
+    }
+
+    .cc-video-caption__desc {
+      font-size: 12px;
+      color: var(--c-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* Compact 4-step process strip below the top row */
+    .cc-process-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      margin-top: 52px;
+      padding-top: 36px;
+      border-top: 1px solid rgba(16, 18, 14, 0.09);
+    }
+
+    .cc-process-step {
+      padding-right: 28px;
+    }
+
+    .cc-process-step + .cc-process-step {
+      padding-left: 28px;
+      padding-right: 28px;
+      border-left: 1px solid rgba(16, 18, 14, 0.08);
+    }
+
+    .cc-process-step:last-child {
+      padding-right: 0;
+    }
+
+    .cc-process-step__num {
+      display: block;
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.13em;
+      color: var(--c-green-d);
+      margin-bottom: 8px;
+    }
+
+    .cc-process-step__title {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--c-ink);
+      margin: 0 0 6px;
+      letter-spacing: -0.01em;
+      line-height: 1.25;
+    }
+
+    .cc-process-step__desc {
+      font-size: 13px;
+      color: var(--c-muted);
+      line-height: 1.62;
+      margin: 0;
+    }
+
+    /* ── Package cards ── */
+    .pkg-section-head { max-width: 620px; margin-bottom: 32px; }
+    .pkg-note {
+      font-size: 13px;
+      color: var(--c-muted);
+      line-height: 1.65;
+      margin-top: 18px;
+      padding-top: 18px;
+      border-top: 1px solid var(--c-border);
+    }
+
+    /* Prevent nav from clipping the section on anchor jump */
+    section[id="packages"] { scroll-margin-top: 80px; }
+
+    .cc-pkg-header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 32px;
+      margin-bottom: 52px;
+    }
+
+    .cc-pkg-header__left { max-width: 540px; }
+
+    .cc-pkg-header__right {
+      flex-shrink: 0;
+      padding-top: 8px;
+      text-align: right;
+    }
+
+    .cc-pkg-min-note {
+      font-size: 13px;
+      color: var(--c-muted);
+      line-height: 1.58;
+      margin: 0;
+    }
+
+    .cc-pkg-min-note strong {
+      display: block;
+      font-family: var(--font);
+      font-weight: 700;
+      color: var(--c-ink);
+      margin-bottom: 2px;
+    }
+
+    /* Grid — slight overflow room for the lifted Standard card */
+    .cc-pkg-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 16px;
+      align-items: start;
+      padding-bottom: 8px;
+    }
+
+    /* Base card */
+    .cc-pkg-card {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      background: #fff;
+      border: 1.5px solid rgba(16, 18, 14, 0.12);
+      border-radius: 18px;
+      padding: 26px 22px 22px;
+      box-shadow:
+        0 1px 3px rgba(14, 11, 7, 0.06),
+        0 6px 22px rgba(14, 11, 7, 0.07);
+      transition: box-shadow 0.18s ease, transform 0.18s ease;
+    }
+
+    .cc-pkg-card:hover {
+      box-shadow:
+        0 2px 6px rgba(14, 11, 7, 0.09),
+        0 12px 36px rgba(14, 11, 7, 0.09);
+      transform: translateY(-2px);
+    }
+
+    /* Standard — lifted, green-bordered */
+    .cc-pkg-card--popular {
+      border: 2px solid var(--c-green);
+      box-shadow:
+        0 0 0 4px rgba(109, 190, 69, 0.12),
+        0 8px 28px rgba(14, 11, 7, 0.11),
+        0 24px 60px rgba(14, 11, 7, 0.09);
+      transform: translateY(-8px);
+    }
+
+    .cc-pkg-card--popular:hover {
+      box-shadow:
+        0 0 0 4px rgba(109, 190, 69, 0.18),
+        0 10px 32px rgba(14, 11, 7, 0.13),
+        0 28px 68px rgba(14, 11, 7, 0.11);
+      transform: translateY(-11px);
+    }
+
+    /* Protector — subtle cool-tinted premium card */
+    .cc-pkg-card--premium {
+      background: rgba(30, 56, 72, 0.025);
+      border-color: rgba(30, 56, 72, 0.20);
+      box-shadow:
+        0 1px 3px rgba(14, 11, 7, 0.06),
+        0 6px 22px rgba(14, 11, 7, 0.07);
+    }
+
+    .cc-pkg-card--premium:hover {
+      box-shadow:
+        0 2px 6px rgba(14, 11, 7, 0.09),
+        0 12px 36px rgba(14, 11, 7, 0.09);
+      transform: translateY(-2px);
+    }
+
+    .cc-pkg-badge--slate {
+      background: #1e3a4d;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    /* Badge spacer keeps non-badged Value/Standard cards aligned */
+    .cc-pkg-badge-spacer {
+      display: block;
+      height: 27px;
+      margin-bottom: 14px;
+    }
+
+    .cc-pkg-badge {
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      border-radius: 5px;
+      padding: 4px 9px;
+      margin-bottom: 14px;
+    }
+
+    .cc-pkg-badge--popular {
+      background: var(--c-green);
+      color: #fff;
+    }
+
+    .cc-pkg-badge--dark {
+      background: #181510;
+      color: rgba(255, 255, 255, 0.90);
+    }
+
+    .cc-pkg-badge--forest {
+      background: #1f3a14;
+      color: rgba(255, 255, 255, 0.88);
+    }
+
+    /* Package name */
+    .cc-pkg-name {
+      font-family: var(--font);
+      font-size: 20px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 14px;
+      letter-spacing: -0.015em;
+      line-height: 1.2;
+    }
+
+    /* Price */
+    .cc-pkg-price-row {
+      display: flex;
+      align-items: baseline;
+      gap: 5px;
+      margin-bottom: 4px;
+    }
+
+    .cc-pkg-price {
+      font-family: var(--font);
+      font-size: 46px;
+      font-weight: 800;
+      color: var(--c-ink);
+      letter-spacing: -0.04em;
+      line-height: 1;
+    }
+
+    .cc-pkg-price-unit {
+      font-family: var(--font);
+      font-size: 15px;
+      font-weight: 600;
+      color: var(--c-muted);
+    }
+
+    .cc-pkg-subtext {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      margin: 0 0 20px;
+      line-height: 1.5;
+    }
+
+    .cc-pkg-divider {
+      height: 1px;
+      background: rgba(16, 18, 14, 0.09);
+      margin: 0 0 18px;
+    }
+
+    /* Feature list */
+    .cc-pkg-features {
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+      flex: 1;
+    }
+
+    .cc-pkg-features li {
+      display: flex;
+      align-items: flex-start;
+      gap: 9px;
+      font-size: 13.5px;
+      color: rgba(16, 18, 14, 0.76);
+      line-height: 1.44;
+    }
+
+    .cc-pkg-features li::before {
+      content: '';
+      flex-shrink: 0;
+      width: 16px;
+      height: 16px;
+      margin-top: 0px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16'%3E%3Ccircle cx='8' cy='8' r='7.5' fill='%236DBE45' fill-opacity='0.16'/%3E%3Cpath d='M5 8.5L7 10.5L11.5 6' stroke='%233F7F2A' stroke-width='1.6' stroke-linecap='round' stroke-linejoin='round' fill='none'/%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    /* Buttons */
+    .cc-pkg-btn {
+      display: block;
+      width: 100%;
+      margin-top: 22px;
+      padding: 14px 16px;
+      border-radius: 10px;
+      font-family: var(--font);
+      font-size: 14px;
+      font-weight: 700;
+      text-align: center;
+      text-decoration: none;
+      letter-spacing: -0.005em;
+      border: 2px solid transparent;
+      transition: background 0.15s ease, box-shadow 0.15s ease, transform 0.12s ease;
+    }
+
+    .cc-pkg-btn--dark {
+      background: #131210;
+      border-color: #131210;
+      color: #fff;
+    }
+
+    .cc-pkg-btn--dark:hover {
+      background: #252220;
+      border-color: #252220;
+      box-shadow: 0 4px 14px rgba(14, 11, 7, 0.22);
+    }
+
+    .cc-pkg-btn--green {
+      background: var(--c-green);
+      border-color: var(--c-green);
+      color: #fff;
+      box-shadow: 0 2px 10px rgba(109, 190, 69, 0.30);
+    }
+
+    .cc-pkg-btn--green:hover {
+      background: var(--c-green-d);
+      border-color: var(--c-green-d);
+      box-shadow: 0 4px 16px rgba(63, 127, 42, 0.36);
+    }
+
+    /* Helper + footnote */
+    .cc-pkg-helper {
+      margin-top: 28px;
+      text-align: center;
+      font-size: 14px;
+      color: var(--c-muted);
+      line-height: 1.6;
+    }
+
+    .cc-pkg-helper a {
+      color: var(--c-green-d);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .cc-pkg-helper a:hover { text-decoration: underline; }
+
+    .cc-pkg-footnote {
+      margin-top: 10px;
+      text-align: center;
+      font-size: 12.5px;
+      color: rgba(16, 18, 14, 0.40);
+      line-height: 1.62;
+    }
+
+    /* ── Add-ons — grouped mini-card layout ── */
+    .cc-ao-section-head {
+      max-width: 600px;
+      margin-bottom: 36px;
+    }
+
+    .cc-ao-section-head .subhead {
+      font-size: 15px;
+      color: var(--c-muted);
+      line-height: 1.68;
+      margin-top: 12px;
+    }
+
+    .cc-ao-groups-row {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 32px;
+    }
+
+    .cc-ao-group__head {
+      margin-bottom: 14px;
+    }
+
+    .cc-ao-group__label {
+      font-family: var(--font);
+      font-size: 10.5px;
+      font-weight: 800;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: var(--c-green-d);
+      margin: 0 0 4px;
+    }
+
+    .cc-ao-group__sub {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.50;
+      margin: 0;
+    }
+
+    .cc-ao-cards {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 9px;
+    }
+
+    .cc-ao-card {
+      background: #fff;
+      border: 1px solid rgba(16, 18, 14, 0.11);
+      border-radius: 12px;
+      padding: 14px;
+      box-shadow: 0 1px 3px rgba(14, 11, 7, 0.05), 0 3px 10px rgba(14, 11, 7, 0.04);
+      transition: border-color 0.15s ease, box-shadow 0.15s ease;
+    }
+
+    .cc-ao-card:hover {
+      border-color: rgba(16, 18, 14, 0.18);
+      box-shadow: 0 2px 6px rgba(14, 11, 7, 0.08), 0 6px 18px rgba(14, 11, 7, 0.06);
+    }
+
+    .cc-ao-card__header {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      gap: 8px;
+      margin-bottom: 5px;
+    }
+
+    .cc-ao-card__name {
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0;
+      line-height: 1.28;
+      flex: 1;
+    }
+
+    .cc-ao-card__desc {
+      font-size: 11.5px;
+      color: var(--c-muted);
+      line-height: 1.50;
+      margin: 0;
+    }
+
+    .cc-ao-price-chip {
+      flex-shrink: 0;
+      display: inline-block;
+      font-family: var(--font);
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      padding: 3px 7px;
+      border-radius: 4px;
+      white-space: nowrap;
+      line-height: 1.4;
+    }
+
+    .cc-ao-price-chip--green {
+      background: rgba(109, 190, 69, 0.13);
+      color: var(--c-green-d);
+    }
+
+    .cc-ao-price-chip--muted {
+      background: rgba(16, 18, 14, 0.06);
+      color: rgba(16, 18, 14, 0.48);
+      font-weight: 600;
+      font-size: 10px;
+    }
+
+    .cc-ao-footer {
+      margin-top: 28px;
+      padding-top: 20px;
+      border-top: 1px solid rgba(16, 18, 14, 0.08);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .cc-ao-footer__text {
+      font-size: 14px;
+      color: var(--c-muted);
+      margin: 0;
+      line-height: 1.55;
+    }
+
+    .cc-ao-footer__btn {
+      flex-shrink: 0;
+      display: inline-block;
+      padding: 9px 18px;
+      border: 1.5px solid rgba(16, 18, 14, 0.20);
+      border-radius: 9px;
+      font-family: var(--font);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--c-ink);
+      text-decoration: none;
+      transition: border-color 0.15s ease, background 0.15s ease;
+    }
+
+    .cc-ao-footer__btn:hover {
+      border-color: rgba(16, 18, 14, 0.38);
+      background: rgba(16, 18, 14, 0.04);
+    }
+
+    /* Other services — 3-card equal row */
+    .cc-ao-cards--services {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    /* Compact inline pricing note under upholstery description */
+    .cc-ao-card__pricing-note {
+      font-size: 11px;
+      color: rgba(16, 18, 14, 0.42);
+      margin: 6px 0 0;
+      line-height: 1.5;
+    }
+
+    .cc-ao-card__pricing-note strong {
+      color: rgba(16, 18, 14, 0.58);
+      font-weight: 600;
+    }
+
+    /* ── Stain Removal Bridge ── */
+    .cc-stain-bridge {
+      background: #F8F6F0;
+      padding: 14px 0 18px;
+    }
+
+    .cc-stain-strip {
+      display: flex;
+      align-items: center;
+      gap: 0;
+      max-width: 860px;
+      background: #FDFAF5;
+      border: 1px solid rgba(16, 18, 14, 0.10);
+      border-radius: 16px;
+      padding: 16px 20px;
+      box-shadow:
+        0 2px 10px rgba(14, 11, 7, 0.05),
+        0 1px 3px rgba(14, 11, 7, 0.04);
+    }
+
+    .cc-stain-strip__img-wrap {
+      flex-shrink: 0;
+      width: 152px;
+      height: 108px;
+      border-radius: 10px;
+      overflow: hidden;
+      margin-right: 22px;
+      box-shadow:
+        0 2px 10px rgba(14, 11, 7, 0.16),
+        0 1px 3px rgba(14, 11, 7, 0.08);
+    }
+
+    .cc-stain-strip__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 36%;
+      display: block;
+    }
+
+    .cc-stain-strip__text {
+      border-left: 2.5px solid var(--c-green);
+      padding-left: 20px;
+    }
+
+    .cc-stain-strip__eyebrow {
+      display: block;
+      font-family: var(--font);
+      font-size: 9.5px;
+      font-weight: 800;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--c-green-d);
+      margin-bottom: 5px;
+    }
+
+    .cc-stain-strip__headline {
+      font-family: var(--font);
+      font-size: 16px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 6px;
+      letter-spacing: -0.015em;
+      line-height: 1.24;
+    }
+
+    .cc-stain-strip__body {
+      font-size: 13px;
+      color: rgba(16, 18, 14, 0.64);
+      line-height: 1.58;
+      margin: 0 0 8px;
+      max-width: 54ch;
+    }
+
+    .cc-stain-strip__fit {
+      font-size: 12.5px;
+      color: rgba(16, 18, 14, 0.46);
+      margin: 0;
+      font-family: var(--font);
+      font-weight: 600;
+    }
+
+    .cc-stain-strip__link {
+      color: var(--c-green-d);
+      font-weight: 700;
+      text-decoration: none;
+    }
+
+    .cc-stain-strip__link:hover { text-decoration: underline; }
+
+    /* scroll target offset for the Pet Premium card */
+    #pet-premium { scroll-margin-top: 90px; }
+
+    /* ── Before & After proof tiles ── */
+    .cc-ba-tiles {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 16px;
+      margin-top: 22px;
+    }
+
+    .cc-ba-tile {
+      background: #fff;
+      border: 1px solid rgba(16, 18, 14, 0.10);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow:
+        0 1px 4px rgba(14, 11, 7, 0.05),
+        0 4px 16px rgba(14, 11, 7, 0.05);
+    }
+
+    .cc-ba-tile__img-wrap {
+      width: 100%;
+      height: 178px;
+      overflow: hidden;
+    }
+
+    .cc-ba-tile__img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transition: transform 0.22s ease;
+    }
+
+    .cc-ba-tile:hover .cc-ba-tile__img { transform: scale(1.03); }
+
+    .cc-ba-tile__body {
+      padding: 14px 16px 16px;
+    }
+
+    .cc-ba-tile__title {
+      font-family: var(--font);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.3;
+    }
+
+    .cc-ba-tile__title::before {
+      content: '';
+      width: 3px;
+      height: 13px;
+      background: var(--c-green-d);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+
+    .cc-ba-tile__desc {
+      font-size: 12.5px;
+      color: rgba(16, 18, 14, 0.56);
+      line-height: 1.58;
+      margin: 0;
+      padding-left: 11px;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 768px) {
+      /* ── Hero — mobile rebuild ── */
+      .cc-hero {
+        height: auto;
+        min-height: 740px;
+      }
+      .cc-hero::before {
+        background-position: center 68%;
+      }
+      .cc-hero::after {
+        background:
+          linear-gradient(90deg, rgba(5,8,6,.86) 0%, rgba(5,8,6,.70) 52%, rgba(5,8,6,.38) 100%),
+          linear-gradient(180deg, rgba(5,8,6,.46) 0%, rgba(5,8,6,.12) 40%, rgba(5,8,6,.62) 100%),
+          linear-gradient(to top, rgba(242,237,227,.18) 0%, rgba(242,237,227,.04) 5%, transparent 12%);
+      }
+      .cc-hero > .container {
+        padding-top: 0;
+        padding-bottom: 96px;
+        padding-left: 24px;
+        padding-right: 24px;
+      }
+      .cc-hero__content { max-width: 100%; }
+      .cc-hero__h1 {
+        font-size: 42px;
+        line-height: 1.06;
+        letter-spacing: -0.022em;
+        max-width: 92vw;
+        margin: 10px 0 16px;
+      }
+      .cc-hero__body {
+        font-size: 17px;
+        line-height: 1.56;
+        max-width: 90vw;
+        margin: 0 0 24px;
+        color: rgba(255,255,255,0.86);
+      }
+      .cc-hero__body--desktop { display: none; }
+      .cc-hero__body--mobile  { display: block; }
+      .cc-hero__ctas {
+        flex-direction: column;
+        gap: 12px;
+        margin-bottom: 20px;
+      }
+      .cc-hero__ctas .btn {
+        width: 100%;
+        height: 56px;
+        border-radius: 14px;
+        font-size: 16px;
+        justify-content: center;
+        padding: 0 20px;
+        box-sizing: border-box;
+      }
+      .cc-hero__btn-outline {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 56px;
+        border-radius: 14px;
+        font-size: 16px;
+        padding: 0 20px;
+        box-sizing: border-box;
+        white-space: normal;
+      }
+      .cc-hero__trust {
+        margin-top: 0;
+        font-size: 14px;
+        line-height: 1.45;
+        background: rgba(0,0,0,.28);
+        border: 1px solid rgba(255,255,255,.12);
+        border-radius: 10px;
+        padding: 10px 12px;
+        display: block;
+        max-width: 100%;
+      }
+      .cc-hero__trust-br { display: inline; }
+      .cc-section-break { display: none; }
+      .cc-problems-section { padding: 64px 0 72px; }
+      .cc-problems-panel { border-radius: 24px; grid-template-columns: 1fr; min-height: auto; }
+      .cc-problems-copy { padding: 48px 28px 28px; }
+      .cc-problems-callouts { padding: 0 28px 48px; }
+      .method-section { padding-top: 64px; padding-bottom: 64px; }
+      .method-section .method-layout { grid-template-columns: 1fr; gap: 32px; }
+      .cc-video-panel { border-radius: 14px; }
+      .cc-process-strip { grid-template-columns: 1fr 1fr; gap: 24px 20px; margin-top: 36px; padding-top: 28px; }
+      .cc-process-step { padding: 0 !important; border-left: none !important; }
+      .cc-pkg-header { flex-direction: column; gap: 10px; margin-bottom: 36px; }
+      .cc-pkg-header__right { text-align: left; }
+      .cc-pkg-grid { grid-template-columns: 1fr; gap: 12px; padding-bottom: 0; }
+      .cc-pkg-card--popular, .cc-pkg-card--premium { transform: none; }
+      .cc-pkg-card--popular:hover, .cc-pkg-card--premium:hover { transform: translateY(-2px); }
+      .cc-pkg-badge-spacer { display: none; }
+      .cc-ao-groups-row { grid-template-columns: 1fr; gap: 28px; }
+      .cc-ao-cards { grid-template-columns: 1fr 1fr; }
+      .cc-ao-cards--services { grid-template-columns: 1fr 1fr; }
+      .cc-ao-footer { flex-direction: column; align-items: flex-start; gap: 14px; }
+      .cc-stain-bridge { padding: 12px 0 16px; }
+      .cc-stain-strip {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0;
+        max-width: 100%;
+        padding: 14px 16px 16px;
+      }
+      .cc-stain-strip__img-wrap {
+        width: 100%;
+        height: 120px;
+        border-radius: 9px;
+        margin-right: 0;
+        margin-bottom: 14px;
+      }
+      .cc-stain-strip__img { object-position: center 32%; }
+      .cc-stain-strip__text { padding-left: 14px; }
+      .cc-ba-tiles { grid-template-columns: 1fr; gap: 12px; margin-top: 16px; }
+      .cc-ba-tile__img-wrap { height: 160px; }
+    }
+  </style>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+</head>
+<body>
+
+<!-- NAV -->
+<header class="nav nav--light" id="site-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="../../assets/logo.png" alt="Carpet Guys logo">
+      <span class="nav__logo-name">Carpet <span>Guys</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="carpet-cleaning.html" class="active">Carpet Cleaning</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="upholstery.html">Upholstery</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__ctas">
+      <a href="tel:7177012797" class="btn btn-outline btn-sm hide-mobile">(717) 701-2797</a>
+      <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+    </div>
+    <button class="nav__hamburger" id="mobile-hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav__drawer" id="mobile-drawer" aria-hidden="true">
+  <nav class="nav__drawer-links">
+    <a href="index.html">Home</a>
+    <a href="carpet-cleaning.html" class="active">Carpet Cleaning</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="upholstery.html">Upholstery</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav__drawer-divider"></div>
+  <div class="nav__drawer-ctas">
+    <a href="tel:7177012797" class="btn btn-outline btn-sm">(717) 701-2797</a>
+    <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+  </div>
+</div>
+
+<!-- 1. HERO -->
+<section class="cc-hero">
+  <div class="container">
+    <div class="cc-hero__content">
+      <div class="eyebrow eyebrow--light">Carpet Cleaning in Central PA</div>
+      <h1 class="cc-hero__h1">Carpet cleaning for rooms, stairs, and hallways used every day.</h1>
+      <p class="cc-hero__body cc-hero__body--desktop">Book clear per-area carpet cleaning for bedrooms, living rooms, stairs, hallways, and high-use areas. We pre-treat problem spots, clean with professional hot water extraction, and help you choose the package that fits your carpet.</p>
+      <p class="cc-hero__body cc-hero__body--mobile">Book clear per-area carpet cleaning for bedrooms, living rooms, stairs, hallways, and high-use areas — with pre-treatment, hot-water extraction, and package guidance.</p>
+      <div class="cc-hero__ctas">
+        <a href="contact.html" class="btn btn-green btn-lg">Book Carpet Cleaning</a>
+        <a href="#packages" class="cc-hero__btn-outline">View Packages</a>
+      </div>
+      <p class="cc-hero__trust">From $50/area · $150 minimum<br class="cc-hero__trust-br">244+ Google reviews · Best of Harrisburg 2023</p>
+    </div>
+  </div>
+</section>
+<div class="cc-section-break" aria-hidden="true"></div>
+
+<!-- 2. COMMON CARPET PROBLEMS -->
+<section class="cc-problems-section">
+  <div class="container">
+    <div class="cc-problems-panel">
+      <div class="cc-problems-copy">
+        <div class="eyebrow eyebrow--light">Common Carpet Problems</div>
+        <h2 class="cc-problems-h2">Your carpet can look clean and still hold buildup.</h2>
+        <p class="cc-problems-body">Vacuuming lifts surface debris. Traffic soil, pet residue, spills, and allergens can settle deeper into the carpet fibers.</p>
+      </div>
+      <div class="cc-problems-callouts">
+        <div class="cc-problem-list">
+          <div class="cc-problem-item">
+            <p class="cc-problem-title">Traffic lanes, stairs &amp; hallways</p>
+            <p class="cc-problem-desc">The dark paths and high-use areas people walk through every day.</p>
+          </div>
+          <div class="cc-problem-item">
+            <p class="cc-problem-title">Pet stains, odors &amp; spills</p>
+            <p class="cc-problem-desc">Accidents, food, drinks, and problem spots that settle below the surface.</p>
+          </div>
+          <div class="cc-problem-item">
+            <p class="cc-problem-title">Dirt, dust &amp; everyday buildup</p>
+            <p class="cc-problem-desc">Soil and residue that regular vacuuming cannot fully remove.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. HOW THE CLEANING WORKS -->
+<section class="method-section">
+  <div class="container">
+
+    <!-- Top row: left copy + right video -->
+    <div class="method-layout">
+      <div class="method-intro">
+        <div class="eyebrow">How It Works</div>
+        <h2 class="method-h2">A proper clean starts before the machine runs.</h2>
+        <p class="method-body">Carpet Guys cleans based on the condition of your carpet. High-use areas, spots, stairs, and problem areas are treated first, then the carpet is cleaned with professional hot water extraction and finished with the right options when needed.</p>
+        <div class="method-ctas">
+          <a href="#packages" class="btn btn-green">View Packages</a>
+          <a href="contact.html" class="btn btn-outline">Book Carpet Cleaning</a>
+        </div>
+      </div>
+      <div class="cc-method-right">
+        <div class="cc-video-panel">
+          <video autoplay muted loop playsinline preload="metadata" aria-hidden="true" poster="../../uploads/dirty.jpg">
+            <source src="../../uploads/slowwand_loop.mp4" type="video/mp4">
+          </video>
+        </div>
+        <div class="cc-video-caption">
+          <p class="cc-video-caption__title">Hot water extraction in progress</p>
+          <p class="cc-video-caption__desc">The wand rinses and extracts soil, solution, and residue from the carpet fibers.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Compact 4-step process strip -->
+    <div class="cc-process-strip">
+      <div class="cc-process-step">
+        <span class="cc-process-step__num">01</span>
+        <h3 class="cc-process-step__title">Pre-treat problem areas</h3>
+        <p class="cc-process-step__desc">Spots, stairs, traffic lanes, and pet areas get attention first.</p>
+      </div>
+      <div class="cc-process-step">
+        <span class="cc-process-step__num">02</span>
+        <h3 class="cc-process-step__title">Loosen the buildup</h3>
+        <p class="cc-process-step__desc">Cleaning solution helps break down soil, residue, and everyday buildup.</p>
+      </div>
+      <div class="cc-process-step">
+        <span class="cc-process-step__num">03</span>
+        <h3 class="cc-process-step__title">Hot water extraction</h3>
+        <p class="cc-process-step__desc">Professional equipment rinses and extracts soil, solution, and buildup from the carpet fibers.</p>
+      </div>
+      <div class="cc-process-step">
+        <span class="cc-process-step__num">04</span>
+        <h3 class="cc-process-step__title">Freshen, dry, and finish</h3>
+        <p class="cc-process-step__desc">Most carpets dry in 4–6 hours. Deodorizer, pet treatment, protector, or Rapid Dry can be added when needed.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- STAIN REMOVAL BRIDGE -->
+<section class="cc-stain-bridge" aria-label="Stain removal note">
+  <div class="container">
+    <div class="cc-stain-strip">
+      <div class="cc-stain-strip__img-wrap">
+        <img src="../../uploads/stainbefore.jpg" alt="Blue stain on carpet before targeted treatment" loading="lazy" class="cc-stain-strip__img">
+      </div>
+      <div class="cc-stain-strip__text">
+        <span class="cc-stain-strip__eyebrow">Stain Removal</span>
+        <h3 class="cc-stain-strip__headline">Problem spots need targeted treatment.</h3>
+        <p class="cc-stain-strip__body">Spills, pet spots, and odor areas usually need pre-treatment before extraction — not just a standard pass.</p>
+        <p class="cc-stain-strip__fit">Best fit: <a href="#pet-premium" class="cc-stain-strip__link">Pet Premium &rarr;</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. PACKAGES -->
+<section class="section section--cream" id="packages">
+  <div class="container">
+
+    <!-- Section header -->
+    <div class="cc-pkg-header">
+      <div class="cc-pkg-header__left">
+        <div class="eyebrow">Choose Your Package</div>
+        <h2 class="h2" style="margin-bottom:12px;">Four packages. One flat price.</h2>
+        <p class="subhead" style="font-size:16px;margin-bottom:0;">All residential packages include professional hot-water extraction. Choose based on how much cleaning, treatment, and protection your carpet needs.</p>
+      </div>
+      <div class="cc-pkg-header__right">
+        <p class="cc-pkg-min-note">
+          <strong>$150 minimum on all residential jobs.</strong>
+          Price covers up to 3 areas.
+        </p>
+      </div>
+    </div>
+
+    <!-- Package cards -->
+    <div class="cc-pkg-grid">
+
+      <!-- Value -->
+      <div class="cc-pkg-card">
+        <span class="cc-pkg-badge-spacer" aria-hidden="true"></span>
+        <p class="cc-pkg-name">Value</p>
+        <div class="cc-pkg-price-row">
+          <span class="cc-pkg-price">$50</span>
+          <span class="cc-pkg-price-unit">/ area</span>
+        </div>
+        <p class="cc-pkg-subtext">$150 min &middot; up to 3 areas</p>
+        <div class="cc-pkg-divider"></div>
+        <ul class="cc-pkg-features">
+          <li>Hot-water extraction</li>
+          <li>Pre-vacuum</li>
+          <li>Traffic lane pre-treatment</li>
+          <li>$150 min covers 3 areas</li>
+        </ul>
+        <a href="contact.html" class="cc-pkg-btn cc-pkg-btn--dark">Book Value</a>
+      </div>
+
+      <!-- Standard -->
+      <div class="cc-pkg-card">
+        <span class="cc-pkg-badge-spacer" aria-hidden="true"></span>
+        <p class="cc-pkg-name">Standard</p>
+        <div class="cc-pkg-price-row">
+          <span class="cc-pkg-price">$60</span>
+          <span class="cc-pkg-price-unit">/ area</span>
+        </div>
+        <p class="cc-pkg-subtext">$180 starting &middot; up to 3 areas</p>
+        <div class="cc-pkg-divider"></div>
+        <ul class="cc-pkg-features">
+          <li>Everything in Value</li>
+          <li>Full pre-spray treatment</li>
+          <li>Edge cleaning</li>
+          <li>Good for normal-traffic homes</li>
+        </ul>
+        <a href="contact.html" class="cc-pkg-btn cc-pkg-btn--dark">Book Standard</a>
+      </div>
+
+      <!-- Pet Premium — most popular -->
+      <div class="cc-pkg-card cc-pkg-card--popular" id="pet-premium">
+        <span class="cc-pkg-badge cc-pkg-badge--popular">Most Popular</span>
+        <p class="cc-pkg-name">Pet Premium</p>
+        <div class="cc-pkg-price-row">
+          <span class="cc-pkg-price">$70</span>
+          <span class="cc-pkg-price-unit">/ area</span>
+        </div>
+        <p class="cc-pkg-subtext">$210 starting &middot; up to 3 areas</p>
+        <div class="cc-pkg-divider"></div>
+        <ul class="cc-pkg-features">
+          <li>Everything in Standard</li>
+          <li>Enzyme pre-treatment</li>
+          <li>Odor neutralizing</li>
+          <li>Targeted pet stain treatment</li>
+        </ul>
+        <a href="contact.html" class="cc-pkg-btn cc-pkg-btn--green">Book Pet Premium</a>
+      </div>
+
+      <!-- Protector — premium tier -->
+      <div class="cc-pkg-card cc-pkg-card--premium">
+        <span class="cc-pkg-badge cc-pkg-badge--slate">Clean + Protect</span>
+        <p class="cc-pkg-name">Protector</p>
+        <div class="cc-pkg-price-row">
+          <span class="cc-pkg-price">$80</span>
+          <span class="cc-pkg-price-unit">/ area</span>
+        </div>
+        <p class="cc-pkg-subtext">$240 starting &middot; up to 3 areas</p>
+        <div class="cc-pkg-divider"></div>
+        <ul class="cc-pkg-features">
+          <li>Everything in Pet Premium</li>
+          <li>Carpet protector applied</li>
+          <li>Extends time between cleans</li>
+          <li>Best for high-traffic or light-colored carpet</li>
+        </ul>
+        <a href="contact.html" class="cc-pkg-btn cc-pkg-btn--dark">Book Protector</a>
+      </div>
+
+    </div>
+
+    <p class="cc-pkg-helper">Not sure which package? <a href="contact.html#quote">Request a quote</a> and we'll recommend the right one.</p>
+    <p class="cc-pkg-footnote">A room up to roughly 250 sq. ft. counts as one area. Hallways and walk-in closets count as half. We confirm areas before cleaning starts.</p>
+
+  </div>
+</section>
+
+<!-- 5. HELP ME CHOOSE -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="pkg-section-head">
+      <div class="eyebrow">Help Me Choose</div>
+      <h2 class="h2">Not sure which package fits?</h2>
+      <p class="subhead" style="font-size:16px;margin-bottom:0;">Use the condition of the carpet, not just the room count. If you are unsure, book the closest option or request a quote and we will help you choose.</p>
+    </div>
+    <div class="pkg-guide" style="max-width:720px;margin-bottom:24px;">
+      <div class="guide-row">
+        <span class="guide-condition">"I just need a basic clean"</span>
+        <span class="guide-answer">Value — $50/area</span>
+      </div>
+      <div class="guide-row">
+        <span class="guide-condition">"Normal traffic and regular use"</span>
+        <span class="guide-answer">Standard — $60/area</span>
+      </div>
+      <div class="guide-row">
+        <span class="guide-condition">"I have pets, odors, or accidents"</span>
+        <span class="guide-answer">Pet Premium — $70/area</span>
+      </div>
+      <div class="guide-row">
+        <span class="guide-condition">"I want extra protection after cleaning"</span>
+        <span class="guide-answer">Protector — $80/area</span>
+      </div>
+    </div>
+    <p class="meta">Still not sure? <a href="contact.html#quote" style="color:var(--c-green-d);font-weight:700;">Request a quote</a> and we'll help you figure it out.</p>
+  </div>
+</section>
+
+<!-- 6. ADD-ONS -->
+<section class="section section--cream" id="addons">
+  <div class="container">
+
+    <div class="cc-ao-section-head">
+      <div class="eyebrow">Add-Ons</div>
+      <h2 class="h2">Add what your home needs.</h2>
+      <p class="subhead">Some jobs need more than the standard carpet clean. Add drying, odor treatment, upholstery, tile, or home-maintenance services when they fit.</p>
+    </div>
+
+    <div class="cc-ao-groups-row">
+
+      <!-- Group 1: Carpet upgrades -->
+      <div class="cc-ao-group">
+        <div class="cc-ao-group__head">
+          <p class="cc-ao-group__label">Carpet upgrades</p>
+          <p class="cc-ao-group__sub">For drying, odor, protection, and cleaner-friendly options.</p>
+        </div>
+        <div class="cc-ao-cards">
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Rapid Dry</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--green">$60</span>
+            </div>
+            <p class="cc-ao-card__desc">3 fans for 24 hours to help carpets dry faster after cleaning.</p>
+          </div>
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Pet Odor Treatment</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--muted">Request quote</span>
+            </div>
+            <p class="cc-ao-card__desc">Extra odor treatment for pet-related spots, smells, and problem areas.</p>
+          </div>
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Protector Add-On</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--muted">Request quote</span>
+            </div>
+            <p class="cc-ao-card__desc">Adds a protective layer to help resist future spills and wear.</p>
+          </div>
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Eco-Friendly Upgrade</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--green">+$20</span>
+            </div>
+            <p class="cc-ao-card__desc">Upgrade to an eco-friendly cleaning solution.</p>
+          </div>
+        </div>
+      </div>
+
+      <!-- Group 2: Other services -->
+      <div class="cc-ao-group">
+        <div class="cc-ao-group__head">
+          <p class="cc-ao-group__label">Other services</p>
+          <p class="cc-ao-group__sub">For furniture, tile, and home-maintenance add-ons.</p>
+        </div>
+        <div class="cc-ao-cards cc-ao-cards--services">
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Upholstery Cleaning</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--green">From $35</span>
+            </div>
+            <p class="cc-ao-card__desc">Sofas, sectionals, recliners, dining chairs, and fabric furniture.</p>
+            <p class="cc-ao-card__pricing-note"><strong>Sofa $100 &middot; Loveseat $75 &middot; Recliner $60 &middot; Sectional $200</strong><br>Dining chairs start at $35 each.</p>
+          </div>
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Tile &amp; Grout Cleaning</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--green">$0.75 / sq. ft.</span>
+            </div>
+            <p class="cc-ao-card__desc">For kitchens, bathrooms, entries, and hard-surface areas.</p>
+          </div>
+          <div class="cc-ao-card">
+            <div class="cc-ao-card__header">
+              <p class="cc-ao-card__name">Dryer Vent Cleaning</p>
+              <span class="cc-ao-price-chip cc-ao-price-chip--green">From $115</span>
+            </div>
+            <p class="cc-ao-card__desc">Helps clear lint buildup from dryer vent lines.</p>
+          </div>
+        </div>
+      </div>
+
+    </div>
+
+    <div class="cc-ao-footer">
+      <p class="cc-ao-footer__text">Not sure what to add? Request a quote and we'll recommend what makes sense.</p>
+      <a href="contact.html#quote" class="cc-ao-footer__btn">Request a Quote</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- 7. BEFORE & AFTER -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="results-header">
+      <div class="results-header__copy">
+        <div class="eyebrow">Before &amp; After</div>
+        <h2>High-use carpet areas show the difference fast.</h2>
+        <p class="results-body">Traffic lanes, stairs, hallways, and everyday buildup are easier to understand when you can see the clean path.</p>
+      </div>
+      <a href="results.html" class="btn btn-outline btn-sm results-header__btn">View More Results →</a>
+    </div>
+    <div class="ba-featured">
+      <span class="ba-label">Before</span>
+      <span class="ba-label ba-label--after ba-label--tr">After</span>
+      <img src="../../uploads/carrestor.jpg" alt="High-use carpet area before and after professional cleaning — Carpet Guys" loading="lazy">
+    </div>
+    <p class="ba-doc-caption">High-use carpet area after extraction.</p>
+
+    <!-- Three supporting proof tiles -->
+    <div class="cc-ba-tiles">
+
+      <div class="cc-ba-tile">
+        <div class="cc-ba-tile__img-wrap">
+          <img src="../../uploads/stainbefore.jpg" alt="Blue stain on carpet before targeted pre-treatment" loading="lazy" class="cc-ba-tile__img" style="object-position: center 36%;">
+        </div>
+        <div class="cc-ba-tile__body">
+          <h3 class="cc-ba-tile__title">Stains &amp; problem spots</h3>
+          <p class="cc-ba-tile__desc">Targeted pre-treatment helps break down spills, pet spots, and odor areas before extraction.</p>
+        </div>
+      </div>
+
+      <div class="cc-ba-tile">
+        <div class="cc-ba-tile__img-wrap">
+          <img src="../../uploads/dirty.jpg" alt="Hot water extraction wand cleaning carpet fibers" loading="lazy" class="cc-ba-tile__img" style="object-position: center 65%;">
+        </div>
+        <div class="cc-ba-tile__body">
+          <h3 class="cc-ba-tile__title">Hot water extraction</h3>
+          <p class="cc-ba-tile__desc">Professional equipment rinses and extracts soil, solution, and residue from the carpet fibers.</p>
+        </div>
+      </div>
+
+      <div class="cc-ba-tile">
+        <div class="cc-ba-tile__img-wrap">
+          <img src="../../uploads/blueba.jpg" alt="Technician using extraction wand on blue carpet in a real Central PA home" loading="lazy" class="cc-ba-tile__img" style="object-position: right 28%;">
+        </div>
+        <div class="cc-ba-tile__body">
+          <h3 class="cc-ba-tile__title">In-home carpet cleaning</h3>
+          <p class="cc-ba-tile__desc">Professional extraction equipment for bedrooms, living rooms, stairs, and high-use areas.</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 8. GOOGLE REVIEWS -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="pkg-section-head">
+      <div class="eyebrow">Google Reviews</div>
+      <h2 class="h2">Trusted by local homeowners.</h2>
+      <p class="subhead" style="font-size:15px;margin-top:10px;margin-bottom:0;">Read what customers say after booking Carpet Guys for carpet cleaning, upholstery, tile, and home cleaning add-ons.</p>
+    </div>
+    <div class="elfsight-app-426cc997-cb06-4a5e-9814-899f23918cbe"></div>
+  </div>
+</section>
+
+<!-- 9. FAQ -->
+<section class="section section--cream" id="faq">
+  <div class="container">
+    <div class="pkg-section-head">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="h2">Carpet cleaning FAQ.</h2>
+      <p class="subhead" style="font-size:15px;margin-top:10px;margin-bottom:0;">Answers about pricing, drying time, packages, pets, stains, and booking.</p>
+    </div>
+    <div class="faq-list" style="max-width:800px;">
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What counts as one carpet cleaning area?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">A room up to roughly 250 sq. ft. counts as one area. Hallways and walk-in closets usually count as half an area. Carpet Guys confirms the area count before cleaning starts so pricing is clear.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How much does carpet cleaning cost?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Residential carpet cleaning starts at $50 per area with a $150 minimum. Standard is $60 per area, Pet Premium is $70 per area, and Protector is $80 per area. The minimum covers up to 3 areas.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Is there a minimum charge?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Yes. Residential carpet cleaning has a $150 minimum. That covers up to 3 areas with the Value package. Higher packages start at $180, $210, or $240 depending on the treatment level.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Which carpet cleaning package should I choose?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Value is best for a basic refresh. Standard is better for normal household traffic. Pet Premium is usually the better starting point for stains, odor, spills, or pet-related areas. Protector is best when you want stain resistance and longer-lasting protection after cleaning.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Which package is best for pets, stains, or odors?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Pet Premium is usually best for pet stains, odor areas, spills, and problem spots. It includes enzyme pre-treatment, odor neutralizing, and targeted pet stain treatment before extraction.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Can carpet cleaning remove every stain?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Not every stain can be guaranteed to come out completely. Results depend on the stain type, how long it has been there, the carpet fiber, and previous products used. Targeted pre-treatment gives problem spots the best chance before extraction.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How long does carpet take to dry after cleaning?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Most carpets dry in about 4–6 hours. Drying time can vary based on carpet thickness, airflow, humidity, and how much treatment was needed. Rapid Dry fans can be added to help carpets dry faster.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Do you move furniture?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Light furniture may be moved when it is safe and practical. Large, fragile, electronic, or heavy items usually need to be moved before the appointment. Carpet Guys can confirm what should be moved before cleaning.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Do you clean upholstery, tile, grout, and dryer vents too?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Yes. Carpet Guys offers add-on services including <a href="upholstery.html" style="color:var(--c-green-d);font-weight:700;">upholstery cleaning</a>, tile and grout cleaning, dryer vent cleaning, Rapid Dry, eco-friendly upgrade, pet odor treatment, and carpet protector.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Can I book carpet cleaning online?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Yes. You can book carpet cleaning online by choosing the package that fits your carpet. If you are not sure which package or add-ons you need, <a href="contact.html#quote" style="color:var(--c-green-d);font-weight:700;">request a quote</a> and Carpet Guys can recommend the right option.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What areas do you serve?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Carpet Guys provides carpet cleaning for homes and businesses in Central PA, including Harrisburg and surrounding communities. Service availability can be confirmed when booking or requesting a quote.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="cta-block">
+      <div>
+        <h2 class="h2">Ready to book your carpet cleaning?</h2>
+        <p class="subhead">Pick your package, choose a date, and we'll handle the rest. Not sure which package fits? Request a quote and we'll help you choose.</p>
+      </div>
+      <div>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-green btn-lg">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-lg">Request a Quote</a>
+        </div>
+        <div class="cta-btns" style="margin-bottom:0;">
+          <a href="tel:7177012797" class="btn btn-ghost btn-sm">Call (717) 701-2797</a>
+        </div>
+        <p class="cta-note">Know your package? Book online. Not sure? Request a quote — we'll point you in the right direction.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">Carpet <span>Guys</span></div>
+        <p class="footer__tag">Flat prices for homes. Clear quotes for businesses. Locally owned carpet cleaning in Central PA.</p>
+        <div class="footer__phone">(717) 701-2797</div>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-green btn-sm">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-sm">Request Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="carpet-cleaning.html">Residential carpet cleaning</a></li>
+          <li><a href="commercial.html">Commercial carpet cleaning</a></li>
+          <li><a href="upholstery.html">Upholstery cleaning</a></li>
+          <li><a href="carpet-cleaning.html#addons">Pet treatment</a></li>
+          <li><a href="carpet-cleaning.html#addons">Area rugs</a></li>
+          <li><a href="carpet-cleaning.html#addons">Dryer vent cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book Online</a></li>
+          <li><a href="contact.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Service Area</div>
+        <ul class="footer__links">
+          <li><a href="#">Harrisburg</a></li>
+          <li><a href="#">Camp Hill</a></li>
+          <li><a href="#">Mechanicsburg</a></li>
+          <li><a href="#">Lemoyne</a></li>
+          <li><a href="#">Carlisle</a></li>
+          <li><a href="#">Hershey</a></li>
+          <li><a href="#">York</a></li>
+          <li><a href="#">Lancaster</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Carpet Guys · Central Pennsylvania · Voted Best of Harrisburg 2023</span>
+      <span>(717) 701-2797</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:7177012797" class="btn btn-ghost">(717) 701-2797</a>
+  <a href="contact.html" class="btn btn-green">Request Quote</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What counts as one carpet cleaning area?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "A room up to roughly 250 sq. ft. counts as one area. Hallways and walk-in closets usually count as half an area. Carpet Guys confirms the area count before cleaning starts so pricing is clear."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How much does carpet cleaning cost?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Residential carpet cleaning starts at $50 per area with a $150 minimum. Standard is $60 per area, Pet Premium is $70 per area, and Protector is $80 per area. The minimum covers up to 3 areas."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is there a minimum charge?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Residential carpet cleaning has a $150 minimum. That covers up to 3 areas with the Value package. Higher packages start at $180, $210, or $240 depending on the treatment level."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which carpet cleaning package should I choose?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Value is best for a basic refresh. Standard is better for normal household traffic. Pet Premium is usually the better starting point for stains, odor, spills, or pet-related areas. Protector is best when you want stain resistance and longer-lasting protection after cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Which package is best for pets, stains, or odors?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Pet Premium is usually best for pet stains, odor areas, spills, and problem spots. It includes enzyme pre-treatment, odor neutralizing, and targeted pet stain treatment before extraction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can carpet cleaning remove every stain?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Not every stain can be guaranteed to come out completely. Results depend on the stain type, how long it has been there, the carpet fiber, and previous products used. Targeted pre-treatment gives problem spots the best chance before extraction."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How long does carpet take to dry after cleaning?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Most carpets dry in about 4–6 hours. Drying time can vary based on carpet thickness, airflow, humidity, and how much treatment was needed. Rapid Dry fans can be added to help carpets dry faster."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you move furniture?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Light furniture may be moved when it is safe and practical. Large, fragile, electronic, or heavy items usually need to be moved before the appointment. Carpet Guys can confirm what should be moved before cleaning."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Do you clean upholstery, tile, grout, and dryer vents too?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. Carpet Guys offers add-on services including upholstery cleaning, tile and grout cleaning, dryer vent cleaning, Rapid Dry, eco-friendly upgrade, pet odor treatment, and carpet protector."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can I book carpet cleaning online?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. You can book carpet cleaning online by choosing the package that fits your carpet. If you are not sure which package or add-ons you need, request a quote and Carpet Guys can recommend the right option."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "What areas do you serve?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Carpet Guys provides carpet cleaning for homes and businesses in Central PA, including Harrisburg and surrounding communities. Service availability can be confirmed when booking or requesting a quote."
+      }
+    }
+  ]
+}
+</script>
+
+<script>
+// Mobile hamburger
+(function() {
+  var btn = document.getElementById('mobile-hamburger');
+  var drawer = document.getElementById('mobile-drawer');
+  if (!btn || !drawer) return;
+  function close() {
+    drawer.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (drawer.classList.contains('open')) { close(); } else {
+      drawer.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+  });
+  drawer.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', close);
+  });
+  document.addEventListener('click', function(e) {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && e.target !== btn) {
+      close();
+    }
+  });
+})();
+
+  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-icon').textContent = '×';
+      }
+    });
+  });
+</script>
+
+<script>
+// Mobile sticky bar — reveal after scroll
+(function () {
+  var bar = document.querySelector('.mobile-bar');
+  if (!bar) return;
+  function update() {
+    var scrolled = window.scrollY > 180;
+    var drawerOpen = !!document.querySelector('.nav__drawer.open');
+    bar.classList.toggle('is-visible', scrolled && !drawerOpen);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  var drawer = document.querySelector('.nav__drawer');
+  if (drawer) new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+  update();
+})();
+</script>
+
+</body>
+</html>
