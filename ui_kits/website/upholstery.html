@@ -1,0 +1,1218 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Upholstery Cleaning in Central PA | Carpet Guys</title>
+  <meta name="description" content="Professional upholstery cleaning for sofas, sectionals, recliners, dining chairs, and mattresses in Central PA. Flat pricing, fabric-safe pre-treatment, hot-water extraction.">
+  <link rel="icon" href="./assets/favicon.ico">
+  <link rel="stylesheet" href="site.css">
+  <style>
+    @media (max-width: 900px) {
+      .nav__ctas      { display: none !important; }
+      .nav__links     { display: none !important; }
+      .nav__hamburger { display: flex !important; }
+    }
+    @media (min-width: 901px) {
+      .nav__hamburger { display: none !important; }
+    }
+    /* ── Hero ── */
+    .uh-hero {
+      background: var(--c-cream);
+      padding-top: calc(76px + 44px);
+      padding-bottom: 52px;
+    }
+    .uh-hero__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 52px;
+      align-items: start;
+    }
+    .uh-hero__left { padding-top: 8px; }
+    .uh-hero__h1 {
+      font-family: var(--font);
+      font-size: clamp(2rem, 3.4vw, 3.1rem);
+      font-weight: 700;
+      line-height: 1.08;
+      letter-spacing: -0.03em;
+      color: var(--c-ink);
+      margin: 10px 0 16px;
+    }
+    .uh-hero__body {
+      font-size: 1rem;
+      line-height: 1.70;
+      color: var(--c-muted);
+      max-width: 44ch;
+      margin: 0 0 6px;
+    }
+    .uh-hero__body-2 {
+      font-size: 1rem;
+      line-height: 1.70;
+      color: var(--c-muted);
+      max-width: 44ch;
+      margin: 0 0 26px;
+    }
+    .uh-hero__ctas {
+      display: flex;
+      gap: 10px;
+      flex-wrap: wrap;
+      margin-bottom: 16px;
+    }
+    /* Pricing block */
+    .uh-hero__pricing-block {
+      display: inline-block;
+      background: #fff;
+      border: 1px solid rgba(16,19,18,0.10);
+      border-radius: 10px;
+      padding: 10px 14px 11px;
+    }
+    .uh-hero__pricing-label {
+      font-size: 10.5px;
+      font-weight: 700;
+      letter-spacing: 0.06em;
+      text-transform: uppercase;
+      color: var(--c-green-d);
+      margin-bottom: 5px;
+    }
+    .uh-hero__pricing-row {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+      flex-wrap: wrap;
+      font-size: 12px;
+      font-weight: 500;
+      color: var(--c-muted);
+    }
+    .uh-hero__pdot {
+      width: 3px;
+      height: 3px;
+      background: currentColor;
+      border-radius: 50%;
+      opacity: 0.35;
+      flex-shrink: 0;
+    }
+    /* ── Hero image panel ── */
+    .uh-hero__frame {
+      position: relative;
+      border-radius: 12px;
+      overflow: hidden;
+      aspect-ratio: 4/3;
+      background: var(--c-cream-d);
+      border: 1px solid rgba(16,19,18,0.10);
+      box-shadow: 0 4px 28px rgba(16,19,18,0.10), 0 1px 3px rgba(16,19,18,0.06);
+    }
+    .uh-hero__frame img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 62%;
+      display: block;
+    }
+    .uh-hero__frame::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(to bottom, transparent 52%, rgba(14,18,16,0.28) 100%);
+      pointer-events: none;
+    }
+    .uh-hero__img-tag {
+      position: absolute;
+      bottom: 14px; left: 16px;
+      z-index: 1;
+      font-size: 11px;
+      font-weight: 600;
+      letter-spacing: 0.07em;
+      text-transform: uppercase;
+      color: rgba(255,255,255,0.88);
+      background: rgba(14,18,16,0.60);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      padding: 6px 12px;
+      border-radius: 5px;
+    }
+    /* ── Hero proof card ── */
+    .uh-hero__proof {
+      margin-top: 11px;
+      background: #fff;
+      border: 1px solid rgba(16,19,18,0.09);
+      border-radius: 10px;
+      padding: 14px 16px;
+      display: flex;
+      align-items: flex-start;
+      gap: 12px;
+      box-shadow: 0 1px 4px rgba(16,19,18,0.04);
+    }
+    .uh-hero__proof-bar {
+      width: 3px;
+      flex-shrink: 0;
+      align-self: stretch;
+      background: var(--c-green);
+      border-radius: 2px;
+    }
+    .uh-hero__proof-title {
+      font-family: var(--font);
+      font-size: 13px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 3px;
+      letter-spacing: -0.01em;
+    }
+    .uh-hero__proof-text {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.52;
+      margin: 0;
+    }
+
+    /* ── Problem awareness ── */
+    .uh-problem-section {
+      background: var(--c-ink);
+      padding: 84px 0 92px;
+      position: relative;
+      overflow: hidden;
+    }
+    .uh-problem-section::before {
+      content: '';
+      position: absolute;
+      inset: -3px;
+      background: url('./assets/couchh.jpg') center 55% / cover no-repeat;
+      opacity: 0.18;
+      filter: blur(1.5px);
+      z-index: 0;
+    }
+    .uh-problem-section::after {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background:
+        linear-gradient(to bottom, rgba(14,20,16,0.50) 0%, rgba(14,20,16,0.22) 40%, rgba(14,20,16,0.22) 60%, rgba(14,20,16,0.50) 100%),
+        linear-gradient(to right, rgba(14,20,16,0.40) 0%, transparent 50%),
+        radial-gradient(ellipse 80% 70% at 50% 50%, transparent 30%, rgba(14,20,16,0.45) 100%);
+      z-index: 0;
+      pointer-events: none;
+    }
+    .uh-problem-section > .container {
+      position: relative;
+      z-index: 1;
+    }
+    .uh-problem-layout {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 60px;
+      align-items: start;
+    }
+    .uh-problem-h2 {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: clamp(22px, 2.6vw, 36px);
+      line-height: 1.10;
+      letter-spacing: -0.022em;
+      color: #fff;
+      margin: 12px 0 18px;
+    }
+    .uh-problem-body {
+      font-size: 16px;
+      color: rgba(255,255,255,0.62);
+      line-height: 1.74;
+      margin: 0 0 28px;
+    }
+    .uh-problem-items {
+      display: flex;
+      flex-direction: column;
+      gap: 12px;
+    }
+    .uh-problem-item {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(255,255,255,0.09);
+      border-radius: 12px;
+      padding: 18px 20px;
+    }
+    .uh-problem-item__title {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 14px;
+      color: #fff;
+      margin: 0 0 5px;
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      line-height: 1.3;
+    }
+    .uh-problem-item__title::before {
+      content: '';
+      width: 3px;
+      height: 13px;
+      background: var(--c-green);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .uh-problem-item__desc {
+      font-size: 13px;
+      color: rgba(255,255,255,0.52);
+      line-height: 1.58;
+      margin: 0;
+      padding-left: 12px;
+    }
+
+    /* ── What we clean — furniture type cards ── */
+    .uh-furniture-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 14px;
+      margin-top: 28px;
+    }
+    .uh-furniture-card {
+      background: #fff;
+      border: 1.5px solid rgba(16,18,14,0.11);
+      border-radius: 16px;
+      padding: 22px 20px 20px;
+      box-shadow: 0 1px 4px rgba(14,11,7,0.05), 0 4px 16px rgba(14,11,7,0.05);
+      transition: box-shadow 0.16s ease, border-color 0.16s ease;
+    }
+    .uh-furniture-card:hover {
+      border-color: rgba(16,18,14,0.18);
+      box-shadow: 0 2px 8px rgba(14,11,7,0.08), 0 8px 24px rgba(14,11,7,0.07);
+    }
+    .uh-furniture-card__price {
+      font-family: var(--font);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--c-ink);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    .uh-furniture-card__name {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 14px;
+      color: var(--c-ink);
+      margin: 0 0 7px;
+      letter-spacing: -0.01em;
+    }
+    .uh-furniture-card__desc {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.55;
+      margin: 0;
+    }
+
+    /* ── How It Works ── */
+    .uh-process-layout {
+      display: grid;
+      grid-template-columns: 1fr 1.45fr;
+      gap: 52px;
+      align-items: start;
+    }
+    .uh-process-note {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.58;
+      margin: 24px 0 0;
+      padding-top: 16px;
+      border-top: 1px solid rgba(16,18,14,0.08);
+    }
+    .uh-process-link {
+      display: inline-block;
+      margin-top: 14px;
+      font-size: 13.5px;
+      font-weight: 600;
+      color: var(--c-green-d);
+      text-decoration: none;
+      letter-spacing: -0.01em;
+    }
+    .uh-process-link:hover { color: var(--c-ink); }
+    .uh-process-panel {
+      background: #fff;
+      border: 1px solid rgba(16,18,14,0.09);
+      border-radius: 16px;
+      box-shadow: 0 2px 18px rgba(16,18,14,0.07), 0 1px 3px rgba(16,18,14,0.04);
+      overflow: hidden;
+    }
+    .uh-process-strip {
+      position: relative;
+      width: 100%;
+      height: 200px;
+      overflow: hidden;
+    }
+    .uh-process-strip img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 46%;
+      display: block;
+    }
+    .uh-process-strip-tag {
+      position: absolute;
+      bottom: 12px;
+      left: 14px;
+      background: rgba(16,19,18,0.68);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 6px;
+      padding: 4px 10px;
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(247,245,239,0.92);
+    }
+    .uh-process-steps {
+      padding: 4px 0;
+    }
+    .uh-process-step {
+      display: flex;
+      align-items: flex-start;
+      gap: 14px;
+      padding: 15px 22px;
+      border-bottom: 1px solid rgba(16,18,14,0.07);
+    }
+    .uh-process-step:last-child { border-bottom: none; }
+    .uh-process-step__num {
+      flex-shrink: 0;
+      width: 26px;
+      height: 26px;
+      background: rgba(109,190,69,0.11);
+      border-radius: 6px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: var(--font);
+      font-size: 10px;
+      font-weight: 800;
+      letter-spacing: 0.05em;
+      color: var(--c-green-d);
+      margin-top: 1px;
+    }
+    .uh-process-step__title {
+      font-family: var(--font);
+      font-weight: 700;
+      font-size: 13.5px;
+      color: var(--c-ink);
+      margin: 0 0 4px;
+      letter-spacing: -0.01em;
+      line-height: 1.2;
+    }
+    .uh-process-step__desc {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.58;
+      margin: 0;
+    }
+
+    /* ── Results cards ── */
+    .uh-results-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 16px;
+    }
+    .uh-result-card {
+      background: #fff;
+      border: 1px solid rgba(16,18,14,0.10);
+      border-radius: 14px;
+      overflow: hidden;
+      box-shadow: 0 1px 4px rgba(14,11,7,0.05), 0 4px 16px rgba(14,11,7,0.05);
+    }
+    .uh-result-card__img-wrap {
+      position: relative;
+      width: 100%;
+      height: 224px;
+      overflow: hidden;
+      background: var(--c-cream-d);
+    }
+    .uh-result-card__img-wrap img {
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      object-position: center;
+      display: block;
+    }
+    .uh-result-card__badge {
+      position: absolute;
+      top: 12px;
+      left: 12px;
+      background: rgba(16,19,18,0.68);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(247,245,239,0.92);
+    }
+    .uh-result-card__split {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      height: 224px;
+    }
+    .uh-result-card__half {
+      position: relative;
+      overflow: hidden;
+    }
+    .uh-result-card__half:first-child {
+      border-right: 2px solid rgba(247,245,239,0.80);
+    }
+    .uh-result-card__half img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+    }
+    .uh-result-card__half-label {
+      position: absolute;
+      bottom: 10px;
+      left: 10px;
+      background: rgba(16,19,18,0.68);
+      backdrop-filter: blur(6px);
+      -webkit-backdrop-filter: blur(6px);
+      border-radius: 5px;
+      padding: 3px 9px;
+      font-size: 9.5px;
+      font-weight: 700;
+      letter-spacing: 0.09em;
+      text-transform: uppercase;
+      color: rgba(247,245,239,0.92);
+    }
+    .uh-result-card__body { padding: 15px 18px 18px; }
+    .uh-result-card__title {
+      font-family: var(--font);
+      font-size: 13.5px;
+      font-weight: 700;
+      color: var(--c-ink);
+      margin: 0 0 5px;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+      line-height: 1.3;
+    }
+    .uh-result-card__title::before {
+      content: '';
+      width: 3px;
+      height: 13px;
+      background: var(--c-green-d);
+      border-radius: 2px;
+      flex-shrink: 0;
+    }
+    .uh-result-card__desc {
+      font-size: 12.5px;
+      color: rgba(16,18,14,0.56);
+      line-height: 1.58;
+      margin: 0;
+      padding-left: 11px;
+    }
+    .uh-results-note {
+      font-size: 12px;
+      color: var(--c-muted);
+      margin-top: 16px;
+      text-align: center;
+    }
+
+
+
+    /* ── Trust strip ── */
+    .uh-trust-strip {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      border: 1px solid rgba(16,18,14,0.10);
+      border-radius: 16px;
+      overflow: hidden;
+      background: #fff;
+    }
+    .uh-trust-item {
+      padding: 26px 22px;
+      border-right: 1px solid rgba(16,18,14,0.08);
+    }
+    .uh-trust-item:last-child { border-right: none; }
+    .uh-trust-item__num {
+      font-family: var(--font);
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--c-ink);
+      letter-spacing: -0.03em;
+      line-height: 1;
+      margin-bottom: 5px;
+    }
+    .uh-trust-item__label {
+      font-size: 12.5px;
+      color: var(--c-muted);
+      line-height: 1.48;
+    }
+
+    /* ── Mobile ── */
+    @media (max-width: 900px) {
+      .uh-hero__split { grid-template-columns: 1fr; gap: 28px; }
+      .uh-hero__left { padding-top: 0; }
+    }
+    @media (max-width: 768px) {
+      .uh-hero { padding-top: calc(76px + 32px); padding-bottom: 44px; }
+      .uh-hero__frame { aspect-ratio: 16 / 9; }
+      .uh-hero__pricing-block { display: block; }
+      .uh-hero__pricing-row { font-size: 11.5px; }
+      .uh-problem-layout { grid-template-columns: 1fr; gap: 32px; }
+      .uh-furniture-grid { grid-template-columns: 1fr 1fr; }
+      .uh-process-layout { grid-template-columns: 1fr; gap: 32px; }
+      .uh-process-strip { height: 160px; }
+      .uh-results-grid { grid-template-columns: 1fr; gap: 12px; }
+      .uh-result-card__img-wrap { height: 190px; }
+      .uh-result-card__split { height: 190px; }
+      .uh-trust-strip { grid-template-columns: 1fr 1fr; }
+      .uh-trust-item { border-right: 1px solid rgba(16,18,14,0.08); border-bottom: 1px solid rgba(16,18,14,0.08); }
+      .uh-trust-item:nth-child(2n) { border-right: none; }
+      .uh-trust-item:nth-last-child(-n+2) { border-bottom: none; }
+    }
+    @media (max-width: 480px) {
+      .uh-furniture-grid { grid-template-columns: 1fr; }
+    }
+  </style>
+  <script src="https://elfsightcdn.com/platform.js" async></script>
+</head>
+<body data-screen-label="Upholstery">
+
+<!-- NAV -->
+<header class="nav nav--light" id="site-nav">
+  <div class="nav__inner">
+    <a href="index.html" class="nav__logo">
+      <img src="./assets/logo.png" alt="Carpet Guys logo">
+      <span class="nav__logo-name">Carpet <span>Guys</span></span>
+    </a>
+    <ul class="nav__links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="carpet-cleaning.html">Carpet Cleaning</a></li>
+      <li><a href="commercial.html">Commercial</a></li>
+      <li><a href="upholstery.html" class="active">Upholstery</a></li>
+      <li><a href="results.html">Results</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div class="nav__ctas">
+      <a href="tel:7177012797" class="btn btn-outline btn-sm hide-mobile">(717) 701-2797</a>
+      <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+    </div>
+    <button class="nav__hamburger" id="mobile-hamburger" aria-label="Open navigation" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<div class="nav__drawer" id="mobile-drawer" aria-hidden="true">
+  <nav class="nav__drawer-links">
+    <a href="index.html">Home</a>
+    <a href="carpet-cleaning.html">Carpet Cleaning</a>
+    <a href="commercial.html">Commercial</a>
+    <a href="upholstery.html" class="active">Upholstery</a>
+    <a href="results.html">Results</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+  <div class="nav__drawer-divider"></div>
+  <div class="nav__drawer-ctas">
+    <a href="tel:7177012797" class="btn btn-outline btn-sm">(717) 701-2797</a>
+    <a href="contact.html" class="btn btn-green btn-sm">Request a Quote</a>
+  </div>
+</div>
+
+<!-- 1. HERO -->
+<section class="uh-hero">
+  <div class="container uh-hero__split">
+
+    <div class="uh-hero__left">
+      <div class="eyebrow">Upholstery Cleaning in Central PA</div>
+      <h1 class="uh-hero__h1">Refresh the furniture your home uses most.</h1>
+      <p class="uh-hero__body">Sofas, sectionals, recliners, dining chairs, and fabric furniture collect body oils, pet hair, spills, odors, and everyday buildup. Carpet Guys cleans upholstery with fabric-safe pre-treatment, hot-water extraction, and deodorizing.</p>
+      <p class="uh-hero__body-2">Book upholstery as a standalone visit or add it to your next carpet cleaning.</p>
+      <div class="uh-hero__ctas">
+        <a href="contact.html" class="btn btn-green btn-lg">Book Online</a>
+        <a href="#pricing" class="btn btn-outline btn-lg">View Pricing</a>
+      </div>
+      <div class="uh-hero__pricing-block">
+        <div class="uh-hero__pricing-label">Flat pricing starts at</div>
+        <div class="uh-hero__pricing-row">
+          <span>Sofa $100</span>
+          <span class="uh-hero__pdot"></span>
+          <span>Loveseat $75</span>
+          <span class="uh-hero__pdot"></span>
+          <span>Recliner $60</span>
+          <span class="uh-hero__pdot"></span>
+          <span>Sectional $200</span>
+          <span class="uh-hero__pdot"></span>
+          <span>Dining Chair $35+</span>
+        </div>
+      </div>
+    </div>
+
+    <div class="uh-hero__visual">
+      <div class="uh-hero__frame">
+        <img src="./assets/tan.jpg" alt="Tan fabric sofa with lifted cushions — residential upholstery cleaning" loading="eager">
+        <span class="uh-hero__img-tag">Upholstery Cleaning</span>
+      </div>
+      <div class="uh-hero__proof">
+        <div class="uh-hero__proof-bar"></div>
+        <div>
+          <p class="uh-hero__proof-title">Pre-treat. Extract. Deodorize.</p>
+          <p class="uh-hero__proof-text">A careful process for the furniture your home uses most.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- 2. PROBLEM AWARENESS -->
+<section class="uh-problem-section">
+  <div class="container">
+    <div class="uh-problem-layout">
+      <div>
+        <div class="eyebrow eyebrow--light">Why Clean Upholstery</div>
+        <h2 class="uh-problem-h2">Your sofa holds more than it shows.</h2>
+        <p class="uh-problem-body">Fabric furniture absorbs body oils, pet dander, food spills, dust, and everyday residue over time. Vacuuming helps the surface, but upholstery cleaning helps remove buildup that settles deeper into the fabric.</p>
+        <a href="contact.html" class="btn btn-green">Book Upholstery Cleaning</a>
+      </div>
+      <div class="uh-problem-items">
+        <div class="uh-problem-item">
+          <p class="uh-problem-item__title">Pet hair, dander &amp; accidents</p>
+          <p class="uh-problem-item__desc">Targeted treatment helps break down odor-causing residue in the fabric — not just mask the smell.</p>
+        </div>
+        <div class="uh-problem-item">
+          <p class="uh-problem-item__title">Food, drink &amp; stain buildup</p>
+          <p class="uh-problem-item__desc">Coffee, grease, crumbs, and spills can settle into fabric and often need more than surface spot-cleaning.</p>
+        </div>
+        <div class="uh-problem-item">
+          <p class="uh-problem-item__title">Body oils &amp; everyday soil</p>
+          <p class="uh-problem-item__desc">Headrests, armrests, and seat cushions absorb oils from regular use. You often feel the buildup before you clearly see it.</p>
+        </div>
+        <div class="uh-problem-item">
+          <p class="uh-problem-item__title">Allergens &amp; dust residue</p>
+          <p class="uh-problem-item__desc">Fabric furniture can hold dust and fine residue, especially on cushions, mattresses, and upholstered pieces used every day.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. CLEANING PROCESS -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="uh-process-layout">
+
+      <!-- Left: editorial copy -->
+      <div>
+        <div class="eyebrow">How It Works</div>
+        <h2 class="h2" style="margin-bottom:14px;">A deeper clean for fabric furniture.</h2>
+        <p class="subhead" style="font-size:16px;margin-bottom:0;max-width:40ch;">We start with the areas that need the most attention, then clean and extract the fabric to remove soil, residue, and odor-causing buildup. Dry time and optional protection depend on the fabric, condition, and service selected.</p>
+        <p class="uh-process-note">Final method depends on fabric type, condition, stains, odor, and selected service.</p>
+        <a href="#pricing" class="uh-process-link">View Upholstery Pricing →</a>
+      </div>
+
+      <!-- Right: process panel -->
+      <div class="uh-process-panel">
+        <div class="uh-process-strip">
+          <img src="./assets/couchhero.jpg" alt="Upholstery extraction tool on fabric sofa — cleaning pass lines visible" loading="lazy">
+          <span class="uh-process-strip-tag">Upholstery Extraction</span>
+        </div>
+        <div class="uh-process-steps">
+          <div class="uh-process-step">
+            <div class="uh-process-step__num">01</div>
+            <div>
+              <h3 class="uh-process-step__title">Pre-treat problem areas</h3>
+              <p class="uh-process-step__desc">Pet spots, food spills, armrests, headrests, cushion edges, and high-contact areas are treated first so the cleaning solution has time to work before extraction.</p>
+            </div>
+          </div>
+          <div class="uh-process-step">
+            <div class="uh-process-step__num">02</div>
+            <div>
+              <h3 class="uh-process-step__title">Hot-water extraction</h3>
+              <p class="uh-process-step__desc">A professional upholstery tool rinses and extracts soil, residue, and cleaning solution from deeper in the fabric — not just the surface.</p>
+            </div>
+          </div>
+          <div class="uh-process-step">
+            <div class="uh-process-step__num">03</div>
+            <div>
+              <h3 class="uh-process-step__title">Shampoo &amp; deodorize</h3>
+              <p class="uh-process-step__desc">Fabric-safe cleaning solution and deodorizing help lift buildup and reduce odor-causing residue, leaving the furniture cleaner and fresher.</p>
+            </div>
+          </div>
+          <div class="uh-process-step">
+            <div class="uh-process-step__num">04</div>
+            <div>
+              <h3 class="uh-process-step__title">Dry time &amp; protection</h3>
+              <p class="uh-process-step__desc">Dry time depends on fabric, airflow, and how much cleaning was needed. Fabric protector can be added when selected or recommended for high-use pieces.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 4. UPHOLSTERY PRICING -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="eyebrow">Upholstery Pricing</div>
+    <h2 class="h2" style="margin-bottom:10px;">Clear pricing for the furniture people use most.</h2>
+    <p class="subhead" style="font-size:15px;margin-bottom:0;max-width:58ch;">Sofas, sectionals, recliners, loveseats, dining chairs, and mattresses. Fabric and most blended upholstery — not leather.</p>
+    <div class="uh-furniture-grid">
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$100</div>
+        <div class="uh-furniture-card__name">Sofa</div>
+        <p class="uh-furniture-card__desc">Standard sofa cleaning with pre-treatment, extraction, and deodorizing.</p>
+      </div>
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$75</div>
+        <div class="uh-furniture-card__name">Loveseat</div>
+        <p class="uh-furniture-card__desc">Two-seat furniture cleaned with the same process as a sofa, scaled for size.</p>
+      </div>
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$60</div>
+        <div class="uh-furniture-card__name">Recliner</div>
+        <p class="uh-furniture-card__desc">Seat cushion, back, arms, and high-contact areas.</p>
+      </div>
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$200</div>
+        <div class="uh-furniture-card__name">Sectional</div>
+        <p class="uh-furniture-card__desc">Standard sectional starting price. Oversized or 5+ section pieces quoted first.</p>
+      </div>
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$35<span style="font-size:14px;font-weight:600;color:var(--c-muted);">+</span></div>
+        <div class="uh-furniture-card__name">Dining Chair</div>
+        <p class="uh-furniture-card__desc">Fabric dining chairs starting at $35 each. Final price depends on size and condition.</p>
+      </div>
+      <div class="uh-furniture-card">
+        <div class="uh-furniture-card__price">$80<span style="font-size:14px;font-weight:600;color:var(--c-muted);">+</span></div>
+        <div class="uh-furniture-card__name">Mattress</div>
+        <p class="uh-furniture-card__desc">Starts at twin size. Surface fabric cleaning, allergen residue, and odor treatment when needed. Price by size.</p>
+      </div>
+    </div>
+    <p style="font-size:13px;color:var(--c-muted);margin-top:18px;">Final price confirmed before cleaning starts. Severe stains, pet odor, or oversized pieces may vary — we quote first.</p>
+    <p style="font-size:13px;color:var(--c-muted);margin-top:8px;">Upholstery can be booked alone or added to a carpet cleaning visit. Pet odor treatment and fabric protector can be quoted when needed.</p>
+    <div style="margin-top:24px;background:#fff;border:1px solid rgba(16,18,14,0.09);border-radius:14px;padding:20px 24px;display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;">
+      <div>
+        <p style="font-family:var(--font);font-size:15px;font-weight:700;color:var(--c-ink);margin:0 0 4px;letter-spacing:-0.01em;">Ready to clean your furniture?</p>
+        <p style="font-size:13px;color:var(--c-muted);margin:0;line-height:1.5;">Book online or request a quote if you have oversized pieces, pet odor, or multiple items.</p>
+      </div>
+      <div style="display:flex;gap:10px;flex-shrink:0;flex-wrap:wrap;">
+        <a href="contact.html" class="btn btn-green">Book Online</a>
+        <a href="contact.html#quote" class="btn btn-outline">Request Quote</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 5. BEFORE & AFTER PROOF -->
+<section class="section section--cream">
+  <div class="container">
+    <div class="results-header">
+      <div class="results-header__copy">
+        <div class="eyebrow">Results</div>
+        <h2>What cleaning does to fabric.</h2>
+        <p class="results-body">Dining chairs and upholstered seats take on spills, body oils, pet residue, and everyday use. These examples show the difference after pre-treatment and extraction.</p>
+      </div>
+      <a href="results.html" class="btn btn-outline btn-sm results-header__btn">View All Results →</a>
+    </div>
+    <div class="uh-results-grid">
+
+      <!-- Card 1: Dining chair before/after combined image -->
+      <div class="uh-result-card">
+        <div class="uh-result-card__img-wrap">
+          <img src="./assets/diningchair.jpg" alt="Dining chair fabric before and after upholstery cleaning" loading="lazy">
+          <span class="uh-result-card__badge">Before &amp; After</span>
+        </div>
+        <div class="uh-result-card__body">
+          <h3 class="uh-result-card__title">Dining chair fabric cleaning</h3>
+          <p class="uh-result-card__desc">Food marks, everyday soil, and chair-seat buildup treated and extracted from fabric dining chairs. Results depend on fabric, staining, and condition.</p>
+        </div>
+      </div>
+
+      <!-- Card 2: Blue chairs split before/after -->
+      <div class="uh-result-card">
+        <div class="uh-result-card__split">
+          <div class="uh-result-card__half">
+            <img src="./assets/blueseatsbefore.jpg" alt="Blue upholstered chairs before cleaning" loading="lazy">
+            <span class="uh-result-card__half-label">Before</span>
+          </div>
+          <div class="uh-result-card__half">
+            <img src="./assets/blueseatsafter.jpg" alt="Blue upholstered chairs after cleaning" loading="lazy">
+            <span class="uh-result-card__half-label">After</span>
+          </div>
+        </div>
+        <div class="uh-result-card__body">
+          <h3 class="uh-result-card__title">Upholstered chair refresh</h3>
+          <p class="uh-result-card__desc">Fabric chairs cleaned to help reduce visible buildup and restore a cleaner, fresher appearance. Results vary by fabric age and condition.</p>
+        </div>
+      </div>
+
+    </div>
+    <p class="uh-results-note">Actual results vary by fabric type, stain age, condition, and prior treatments.</p>
+  </div>
+</section>
+
+<!-- 6. TRUST STRIP -->
+<section class="section section--paper" style="padding-top:48px;padding-bottom:48px;">
+  <div class="container">
+    <div class="uh-trust-strip">
+      <div class="uh-trust-item">
+        <div class="uh-trust-item__num">5★</div>
+        <div class="uh-trust-item__label">Average Google rating &nbsp;· 244+ reviews</div>
+      </div>
+      <div class="uh-trust-item">
+        <div class="uh-trust-item__num">2023</div>
+        <div class="uh-trust-item__label">Best of Harrisburg — locally voted award</div>
+      </div>
+      <div class="uh-trust-item">
+        <div class="uh-trust-item__num">Local</div>
+        <div class="uh-trust-item__label">Locally owned — not a franchise or national chain</div>
+      </div>
+      <div class="uh-trust-item">
+        <div class="uh-trust-item__num">48 hr</div>
+        <div class="uh-trust-item__label">Most jobs scheduled within 48 hours of booking</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. GOOGLE REVIEWS -->
+<section class="section section--paper" style="padding-top:52px;padding-bottom:52px;">
+  <div class="container">
+    <div style="max-width:620px;margin-bottom:28px;">
+      <div class="eyebrow">Google Reviews</div>
+      <h2 class="h2">What customers say.</h2>
+      <p style="font-size:15px;color:var(--c-muted);margin:8px 0 0;line-height:1.55;">See recent Google reviews from local customers.</p>
+    </div>
+    <div class="elfsight-app-426cc997-cb06-4a5e-9814-899f23918cbe"></div>
+  </div>
+</section>
+
+<!-- 8. FAQ -->
+<section class="section section--cream" id="faq">
+  <div class="container">
+    <div style="max-width:620px;margin-bottom:32px;">
+      <div class="eyebrow">FAQ</div>
+      <h2 class="h2">Upholstery cleaning FAQ.</h2>
+      <p class="subhead" style="font-size:15px;margin-top:10px;margin-bottom:0;">Common questions about pricing, fabric types, dry time, pet stains, and booking.</p>
+    </div>
+    <div class="faq-list" style="max-width:800px;">
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How much does upholstery cleaning cost?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Most furniture types are priced flat: Sofa $100, Loveseat $75, Recliner $60, Sectional from $200, Dining chairs from $35 each, Mattress from $80. Oversized, severely soiled, or custom pieces are quoted before cleaning starts — no surprises on price.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What fabrics do you clean?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">We clean most synthetic and blended fabric upholstery — the most common types found in sofas, sectionals, chairs, and mattresses. We test an inconspicuous spot first. If the fabric is not a good fit for extraction, we will let you know before starting. We do not currently clean leather.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          How long does upholstery take to dry?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Most sofas and chairs dry in about 3–6 hours. Drying time depends on fabric thickness, airflow, and room humidity. Open a window or run a fan to speed it up. We manage moisture during cleaning to protect the frame and padding underneath.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Can you remove pet odor from a couch?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">In most cases, yes. Enzyme pre-treatment breaks down the odor source at the fiber level before extraction — not just masks the smell. For severe cases where the odor has saturated the padding or frame, we will quote it first and set accurate expectations before starting.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Do you clean leather furniture?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">We currently focus on fabric and blended upholstery, not leather. If you have leather furniture that needs cleaning, give us a call and we can point you toward the right specialist for it.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Can I add upholstery to my carpet cleaning appointment?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Yes. Upholstery cleaning can be added to any residential carpet cleaning visit — same crew, same visit, one scheduling call. Just note the furniture pieces when you book online or request a quote. We'll confirm pricing before we arrive.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          Can you get food and drink stains out of a sofa?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">Most food and drink stains respond well to targeted pre-treatment followed by extraction. Results depend on the stain type, how long it has been there, and the fabric. We treat problem spots specifically before running the extraction pass to give them the best possible outcome.</div>
+      </div>
+
+      <div class="faq-item">
+        <button class="faq-btn" aria-expanded="false">
+          What areas do you serve?
+          <span class="faq-icon">+</span>
+        </button>
+        <div class="faq-body">We serve Harrisburg, Mechanicsburg, Camp Hill, Lemoyne, Carlisle, Hershey, Middletown, York, Lancaster, and surrounding Central PA communities. Not sure if we cover your area? Call us or request a quote and we will confirm availability.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- 10. FINAL CTA -->
+<section class="section section--paper">
+  <div class="container">
+    <div class="cta-block">
+      <div>
+        <h2 class="h2">Ready for cleaner furniture?</h2>
+        <p class="subhead">Book a sofa, pair it with a carpet cleaning, or request a quote for a sectional or custom piece. One crew, one visit.</p>
+      </div>
+      <div>
+        <div class="cta-btns">
+          <a href="contact.html" class="btn btn-green btn-lg">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-lg">Request a Quote</a>
+        </div>
+        <div class="cta-btns" style="margin-bottom:0;">
+          <a href="tel:7177012797" class="btn btn-ghost btn-sm">Call (717) 701-2797</a>
+        </div>
+        <p class="cta-note">Questions about your furniture? Call or request a quote and we'll help you figure out the right scope.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="container">
+    <div class="footer__top">
+      <div>
+        <div class="footer__brand">Carpet <span>Guys</span></div>
+        <p class="footer__tag">Flat prices for homes. Clear quotes for businesses. Locally owned carpet cleaning in Central PA.</p>
+        <div class="footer__phone">(717) 701-2797</div>
+        <div class="btn-group">
+          <a href="contact.html" class="btn btn-green btn-sm">Book Online</a>
+          <a href="contact.html#quote" class="btn btn-ghost btn-sm">Request Quote</a>
+        </div>
+      </div>
+      <div>
+        <div class="footer__col-title">Services</div>
+        <ul class="footer__links">
+          <li><a href="carpet-cleaning.html">Residential carpet cleaning</a></li>
+          <li><a href="commercial.html">Commercial carpet cleaning</a></li>
+          <li><a href="upholstery.html">Upholstery cleaning</a></li>
+          <li><a href="carpet-cleaning.html#addons">Pet treatment</a></li>
+          <li><a href="carpet-cleaning.html#addons">Area rugs</a></li>
+          <li><a href="carpet-cleaning.html#addons">Dryer vent cleaning</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Company</div>
+        <ul class="footer__links">
+          <li><a href="results.html">Results</a></li>
+          <li><a href="contact.html">Contact</a></li>
+          <li><a href="contact.html">Book Online</a></li>
+          <li><a href="contact.html#quote">Request a Quote</a></li>
+        </ul>
+      </div>
+      <div>
+        <div class="footer__col-title">Service Area</div>
+        <ul class="footer__links">
+          <li><a href="#">Harrisburg</a></li>
+          <li><a href="#">Camp Hill</a></li>
+          <li><a href="#">Mechanicsburg</a></li>
+          <li><a href="#">Lemoyne</a></li>
+          <li><a href="#">Carlisle</a></li>
+          <li><a href="#">Hershey</a></li>
+          <li><a href="#">York</a></li>
+          <li><a href="#">Lancaster</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer__bottom">
+      <span>© 2026 Carpet Guys · Central Pennsylvania · Voted Best of Harrisburg 2023</span>
+      <span>(717) 701-2797</span>
+    </div>
+  </div>
+</footer>
+
+<!-- MOBILE STICKY BAR -->
+<div class="mobile-bar">
+  <a href="tel:7177012797" class="btn btn-ghost">(717) 701-2797</a>
+  <a href="contact.html" class="btn btn-green">Request Quote</a>
+</div>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Service",
+      "name": "Upholstery Cleaning",
+      "provider": {
+        "@type": "LocalBusiness",
+        "name": "Carpet Guys",
+        "telephone": "+17177012797",
+        "areaServed": "Central Pennsylvania"
+      },
+      "description": "Professional upholstery cleaning for sofas, sectionals, recliners, dining chairs, and mattresses. Fabric-safe pre-treatment and hot-water extraction.",
+      "offers": [
+        { "@type": "Offer", "name": "Sofa Cleaning", "price": "100", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Loveseat Cleaning", "price": "75", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Recliner Cleaning", "price": "60", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Sectional Cleaning", "price": "200", "priceCurrency": "USD" },
+        { "@type": "Offer", "name": "Dining Chair Cleaning", "price": "35", "priceCurrency": "USD" }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "How much does upholstery cleaning cost?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most furniture types are priced flat: Sofa $100, Loveseat $75, Recliner $60, Sectional from $200, Dining chairs from $35 each, Mattress from $80. Oversized or severely soiled pieces are quoted before cleaning starts."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What fabrics do you clean?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We clean most synthetic and blended fabric upholstery. We test an inconspicuous spot first. If the fabric is not a good fit for extraction, we will let you know before starting. We do not currently clean leather."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "How long does upholstery take to dry?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most sofas and chairs dry in about 3–6 hours. Drying time depends on fabric thickness, airflow, and room humidity. Open a window or run a fan to speed it up."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you remove pet odor from a couch?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "In most cases, yes. Enzyme pre-treatment breaks down the odor source at the fiber level before extraction. For severe cases where the odor has saturated the padding or frame, we quote it first and set accurate expectations."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Do you clean leather furniture?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We currently focus on fabric and blended upholstery, not leather. If you have leather furniture that needs cleaning, give us a call and we can point you toward a specialist."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I add upholstery to my carpet cleaning appointment?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Upholstery cleaning can be added to any residential carpet cleaning visit — same crew, same visit, one scheduling call. Just note the furniture pieces when you book online or request a quote."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can you get food and drink stains out of a sofa?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Most food and drink stains respond well to targeted pre-treatment followed by extraction. Results depend on the stain type, how long it has been there, and the fabric."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What areas do you serve?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "We serve Harrisburg, Mechanicsburg, Camp Hill, Lemoyne, Carlisle, Hershey, Middletown, York, Lancaster, and surrounding Central PA communities."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+
+<script>
+// Mobile hamburger
+(function() {
+  var btn = document.getElementById('mobile-hamburger');
+  var drawer = document.getElementById('mobile-drawer');
+  if (!btn || !drawer) return;
+  function close() {
+    drawer.classList.remove('open');
+    btn.classList.remove('open');
+    btn.setAttribute('aria-expanded', 'false');
+    drawer.setAttribute('aria-hidden', 'true');
+  }
+  btn.addEventListener('click', function(e) {
+    e.stopPropagation();
+    if (drawer.classList.contains('open')) { close(); } else {
+      drawer.classList.add('open');
+      btn.classList.add('open');
+      btn.setAttribute('aria-expanded', 'true');
+      drawer.setAttribute('aria-hidden', 'false');
+    }
+  });
+  drawer.querySelectorAll('a').forEach(function(link) {
+    link.addEventListener('click', close);
+  });
+  document.addEventListener('click', function(e) {
+    if (drawer.classList.contains('open') && !drawer.contains(e.target) && e.target !== btn) {
+      close();
+    }
+  });
+})();
+
+  document.querySelectorAll('.faq-btn').forEach(function(btn) {
+    btn.addEventListener('click', function() {
+      var item = btn.closest('.faq-item');
+      var isOpen = item.classList.contains('open');
+      document.querySelectorAll('.faq-item').forEach(function(i) {
+        i.classList.remove('open');
+        i.querySelector('.faq-btn').setAttribute('aria-expanded', 'false');
+        i.querySelector('.faq-icon').textContent = '+';
+      });
+      if (!isOpen) {
+        item.classList.add('open');
+        btn.setAttribute('aria-expanded', 'true');
+        btn.querySelector('.faq-icon').textContent = '×';
+      }
+    });
+  });
+  (function(){
+    var bar = document.querySelector('.mobile-bar');
+    if (!bar) return;
+    document.addEventListener('focusin', function(e) {
+      if (e.target.matches('input, textarea, select')) bar.style.transform = 'translateY(110%)';
+    });
+    document.addEventListener('focusout', function() {
+      setTimeout(function() { bar.style.transform = ''; }, 250);
+    });
+  })();
+</script>
+
+<script>
+// Mobile sticky bar — reveal after scroll
+(function () {
+  var bar = document.querySelector('.mobile-bar');
+  if (!bar) return;
+  function update() {
+    var scrolled = window.scrollY > 180;
+    var drawerOpen = !!document.querySelector('.nav__drawer.open');
+    bar.classList.toggle('is-visible', scrolled && !drawerOpen);
+  }
+  window.addEventListener('scroll', update, { passive: true });
+  var drawer = document.querySelector('.nav__drawer');
+  if (drawer) new MutationObserver(update).observe(drawer, { attributes: true, attributeFilter: ['class'] });
+  update();
+})();
+</script>
+
+</body>
+</html>

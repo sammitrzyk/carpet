@@ -1,0 +1,209 @@
+/* ==========================================================================
+   Carpet Guys — Colors & Type
+   Brand: Green-on-black wordmark + small mascot character.
+   Palette built around a charcoal/black base, off-white residential warmth,
+   and the brand's signature lime-green CTA accent. A muted gold accent is
+   reserved for "Best of Harrisburg 2023" trust badges.
+   ========================================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&display=swap');
+
+/* Brand display font — uploaded by user */
+@font-face {
+  font-family: 'Archivo Black';
+  src: url('fonts/ArchivoBlack-Regular.ttf') format('truetype');
+  font-weight: 400 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+:root {
+  /* ---------- Brand ---------- */
+  --cg-green:        #7ED321;   /* primary brand accent (logo + CTA) */
+  --cg-green-deep:   #5FA316;   /* hover/press */
+  --cg-green-soft:   #E8F7D2;   /* tinted residential surface */
+  --cg-ink:          #0E1110;   /* near-black, primary dark surface */
+  --cg-ink-soft:     #1A1E1C;   /* secondary dark surface */
+  --cg-ink-line:     rgba(255,255,255,0.10);
+
+  --cg-cream:        #F7F5EE;   /* warm off-white, residential */
+  --cg-paper:        #FFFFFF;   /* pure paper, used sparingly */
+  --cg-stone:        #EFEDE6;   /* light neutral */
+  --cg-stone-2:      #E4E1D7;   /* divider neutral */
+  --cg-line:         rgba(14,17,16,0.10);
+
+  --cg-gold:         #B8924E;   /* award/trust accent — used sparingly */
+  --cg-blue-trust:   #1F6FA8;   /* google-review blue (only on review chrome) */
+  --cg-red:          #C0392B;   /* destructive / alert (rare) */
+
+  /* ---------- Text ---------- */
+  --cg-fg-1:         #0E1110;   /* primary text on light */
+  --cg-fg-2:         #3A3D3A;   /* secondary text on light */
+  --cg-fg-3:         #6F6F6A;   /* tertiary / meta */
+  --cg-fg-on-dark-1: #F7F5EE;   /* primary text on dark */
+  --cg-fg-on-dark-2: #B8BAB6;   /* secondary on dark */
+  --cg-fg-on-dark-3: #7B7E79;   /* tertiary on dark */
+
+  /* ---------- Type families ---------- */
+  --cg-display: 'Archivo Black', 'Impact', system-ui, sans-serif;       /* H1, H2, prices */
+  --cg-headline:'Manrope', system-ui, sans-serif;                       /* H3, eyebrows, UI labels */
+  --cg-body:    'Manrope', system-ui, sans-serif;                       /* paragraphs/UI */
+  --cg-mono:    ui-monospace, 'JetBrains Mono', SFMono-Regular, monospace;
+
+  /* ---------- Type scale (semantic) ---------- */
+  --cg-eyebrow-size: 12px;
+  --cg-eyebrow-tracking: 0.18em;
+  --cg-eyebrow-weight: 700;
+
+  --cg-h1-size: clamp(48px, 7.5vw, 88px);
+  --cg-h1-line: 0.95;
+  --cg-h1-tracking: -0.005em;
+
+  --cg-h2-size: clamp(32px, 4.5vw, 56px);
+  --cg-h2-line: 1.0;
+  --cg-h2-tracking: 0;
+
+  --cg-h3-size: clamp(22px, 2vw, 28px);
+  --cg-h3-line: 1.15;
+
+  --cg-body-size: 17px;
+  --cg-body-line: 1.55;
+
+  --cg-small-size: 14px;
+  --cg-small-line: 1.45;
+
+  --cg-price-size: clamp(44px, 5vw, 64px);
+
+  /* ---------- Spacing ---------- */
+  --cg-s-1: 4px;
+  --cg-s-2: 8px;
+  --cg-s-3: 12px;
+  --cg-s-4: 16px;
+  --cg-s-5: 24px;
+  --cg-s-6: 32px;
+  --cg-s-7: 48px;
+  --cg-s-8: 64px;
+  --cg-s-9: 96px;
+  --cg-s-10:128px;
+
+  /* ---------- Radii ---------- */
+  --cg-r-xs: 4px;
+  --cg-r-sm: 8px;
+  --cg-r-md: 12px;
+  --cg-r-lg: 14px;
+  --cg-r-pill: 999px;
+
+  /* ---------- Shadows (subtle only) ---------- */
+  --cg-shadow-1: 0 1px 2px rgba(14,17,16,0.06), 0 1px 1px rgba(14,17,16,0.04);
+  --cg-shadow-2: 0 6px 18px -8px rgba(14,17,16,0.18), 0 2px 4px rgba(14,17,16,0.06);
+  --cg-shadow-3: 0 18px 48px -16px rgba(14,17,16,0.30);
+
+  /* ---------- Motion ---------- */
+  --cg-ease: cubic-bezier(0.22, 0.61, 0.36, 1);
+  --cg-dur-1: 120ms;
+  --cg-dur-2: 220ms;
+  --cg-dur-3: 360ms;
+
+  /* ---------- Layout ---------- */
+  --cg-max-width: 1240px;
+  --cg-gutter: 24px;
+}
+
+/* ==========================================================================
+   Element defaults — semantic styles wired to the tokens above
+   ========================================================================== */
+
+html, body {
+  background: var(--cg-cream);
+  color: var(--cg-fg-1);
+  font-family: var(--cg-body);
+  font-size: var(--cg-body-size);
+  line-height: var(--cg-body-line);
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.cg-eyebrow {
+  font-family: var(--cg-headline);
+  font-size: var(--cg-eyebrow-size);
+  font-weight: var(--cg-eyebrow-weight);
+  letter-spacing: var(--cg-eyebrow-tracking);
+  text-transform: uppercase;
+  color: var(--cg-green-deep);
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+}
+.cg-eyebrow::before {
+  content: "";
+  width: 24px; height: 2px;
+  background: var(--cg-green-deep);
+  display: inline-block;
+}
+
+h1, .cg-h1 {
+  font-family: var(--cg-display);
+  font-weight: 400;
+  font-size: var(--cg-h1-size);
+  line-height: var(--cg-h1-line);
+  letter-spacing: var(--cg-h1-tracking);
+  text-transform: uppercase;
+  margin: 0 0 var(--cg-s-5);
+  color: var(--cg-fg-1);
+}
+
+h2, .cg-h2 {
+  font-family: var(--cg-display);
+  font-weight: 400;
+  font-size: var(--cg-h2-size);
+  line-height: var(--cg-h2-line);
+  letter-spacing: var(--cg-h2-tracking);
+  text-transform: uppercase;
+  margin: 0 0 var(--cg-s-4);
+}
+
+h3, .cg-h3 {
+  font-family: var(--cg-headline);
+  font-weight: 800;
+  font-size: var(--cg-h3-size);
+  line-height: var(--cg-h3-line);
+  margin: 0 0 var(--cg-s-3);
+}
+
+h4, .cg-h4 {
+  font-family: var(--cg-headline);
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 1.3;
+  margin: 0 0 var(--cg-s-2);
+}
+
+p, .cg-p {
+  font-family: var(--cg-body);
+  font-size: var(--cg-body-size);
+  line-height: var(--cg-body-line);
+  color: var(--cg-fg-2);
+  text-wrap: pretty;
+  margin: 0 0 var(--cg-s-4);
+}
+
+.cg-meta, small {
+  font-family: var(--cg-body);
+  font-size: var(--cg-small-size);
+  line-height: var(--cg-small-line);
+  color: var(--cg-fg-3);
+}
+
+.cg-price {
+  font-family: var(--cg-display);
+  font-weight: 700;
+  font-size: var(--cg-price-size);
+  line-height: 1;
+  letter-spacing: -0.01em;
+  color: var(--cg-fg-1);
+}
+
+/* Dark surfaces flip text colors */
+.cg-on-dark { color: var(--cg-fg-on-dark-1); }
+.cg-on-dark p, .cg-on-dark .cg-p { color: var(--cg-fg-on-dark-2); }
+.cg-on-dark .cg-meta, .cg-on-dark small { color: var(--cg-fg-on-dark-3); }
