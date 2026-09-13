@@ -1630,12 +1630,6 @@
           <div class="qform-error" id="cqf-error">Something went wrong. Please try again or call <a href="tel:7177012797">(717) 701-2797</a>.</div>
 
         </form>
-
-        <div class="qform-success" id="cqf-success">
-          <div class="qform-success__mark">✓</div>
-          <div class="qform-success__title">Quote request sent.</div>
-          <p class="qform-success__body">Thanks — your commercial quote request was sent. Carpet Guys will review the details and follow up.</p>
-        </div>
       </div>
 
     </div>
@@ -1781,51 +1775,64 @@
       <div class="comm-quote__form-wrap">
         <div class="comm-quote__form-label">Commercial Quote Request</div>
 
-        <div class="form-row" style="margin-bottom: 14px;">
-          <div class="form-field" style="margin-bottom: 0;">
-            <label>Name</label>
-            <input type="text" placeholder="Jamie Reilly">
-          </div>
-          <div class="form-field" style="margin-bottom: 0;">
-            <label>Phone</label>
-            <input type="tel" placeholder="(717) 555-0142">
-          </div>
-        </div>
+        <form
+          id="commercial-quote-form-bottom"
+          name="commercial-quote-bottom"
+          method="POST"
+          data-netlify="true"
+          netlify-honeypot="bot-field-bottom"
+          novalidate
+        >
+          <input type="hidden" name="form-name" value="commercial-quote-bottom">
+          <p style="display:none"><label>Do not fill this out: <input name="bot-field-bottom"></label></p>
 
-        <div class="form-row" style="margin-bottom: 14px;">
-          <div class="form-field" style="margin-bottom: 0;">
-            <label>Business / Facility Type</label>
-            <select>
-              <option value="">Select type…</option>
-              <option>Office</option>
-              <option>Retail store</option>
-              <option>Church / worship facility</option>
-              <option>School or college</option>
-              <option>Library or public facility</option>
-              <option>Apartment / property management</option>
-              <option>Restaurant or hospitality</option>
-              <option>Medical or professional</option>
-              <option>Other commercial</option>
-            </select>
+          <div class="form-row" style="margin-bottom: 14px;">
+            <div class="form-field" style="margin-bottom: 0;">
+              <label for="cqfb-name">Name</label>
+              <input type="text" id="cqfb-name" name="name" placeholder="Jamie Reilly" required>
+            </div>
+            <div class="form-field" style="margin-bottom: 0;">
+              <label for="cqfb-phone">Phone</label>
+              <input type="tel" id="cqfb-phone" name="phone" placeholder="(717) 555-0142" required>
+            </div>
           </div>
-          <div class="form-field" style="margin-bottom: 0;">
-            <label>City / ZIP</label>
-            <input type="text" placeholder="Harrisburg, 17101">
+
+          <div class="form-row" style="margin-bottom: 14px;">
+            <div class="form-field" style="margin-bottom: 0;">
+              <label for="cqfb-facility-type">Business / Facility Type</label>
+              <select id="cqfb-facility-type" name="facility-type">
+                <option value="">Select type…</option>
+                <option>Office</option>
+                <option>Retail store</option>
+                <option>Church / worship facility</option>
+                <option>School or college</option>
+                <option>Library or public facility</option>
+                <option>Apartment / property management</option>
+                <option>Restaurant or hospitality</option>
+                <option>Medical or professional</option>
+                <option>Other commercial</option>
+              </select>
+            </div>
+            <div class="form-field" style="margin-bottom: 0;">
+              <label for="cqfb-city">City / ZIP</label>
+              <input type="text" id="cqfb-city" name="city-zip" placeholder="Harrisburg, 17101">
+            </div>
           </div>
-        </div>
 
-        <div class="form-field">
-          <label>Areas that need cleaned</label>
-          <textarea placeholder="e.g. 4,200 sq ft open office + two conference rooms, hallway carpet, upholstery on 8 chairs"></textarea>
-        </div>
+          <div class="form-field">
+            <label for="cqfb-areas">Areas that need cleaned</label>
+            <textarea id="cqfb-areas" name="areas" placeholder="e.g. 4,200 sq ft open office + two conference rooms, hallway carpet, upholstery on 8 chairs"></textarea>
+          </div>
 
-        <div class="form-field">
-          <label>Preferred timing or scheduling notes</label>
-          <input type="text" placeholder="After-hours weekday, around Sunday services, this month…">
-        </div>
+          <div class="form-field">
+            <label for="cqfb-timing">Preferred timing or scheduling notes</label>
+            <input type="text" id="cqfb-timing" name="timing" placeholder="After-hours weekday, around Sunday services, this month…">
+          </div>
 
-        <button type="button" class="btn btn-green btn-lg" style="width: 100%; margin-top: 4px;">Request Commercial Quote</button>
-        <div class="comm-quote__form-note">Most quotes go out same business day.</div>
+          <button type="submit" class="btn btn-green btn-lg" style="width: 100%; margin-top: 4px;">Request Commercial Quote</button>
+          <div class="comm-quote__form-note">Most quotes go out same business day.</div>
+          <div class="qform-error" id="cqfb-error">Something went wrong. Please try again or call <a href="tel:7177012797">(717) 701-2797</a>.</div>
+        </form>
       </div>
 
     </div>
@@ -1934,14 +1941,14 @@ document.querySelectorAll('.faq-btn').forEach(function(btn) {
   });
 })();
 
-// Commercial quote form — Netlify AJAX submission
-(function() {
-  var form = document.getElementById('commercial-quote-form');
+// Commercial quote forms — Netlify AJAX submission, redirect to thank-you page
+function submitCommercialQuoteForm(formId, errorId, submitLabel) {
+  var form = document.getElementById(formId);
   if (!form) return;
   form.addEventListener('submit', function(e) {
     e.preventDefault();
     var btn = form.querySelector('[type="submit"]');
-    var errEl = document.getElementById('cqf-error');
+    var errEl = document.getElementById(errorId);
     btn.disabled = true;
     btn.textContent = 'Sending…';
     errEl.style.display = 'none';
@@ -1952,19 +1959,20 @@ document.querySelectorAll('.faq-btn').forEach(function(btn) {
     })
     .then(function(res) {
       if (res.ok) {
-        form.style.display = 'none';
-        document.getElementById('cqf-success').style.display = 'block';
+        window.location.href = '/commercial-thankyou';
       } else {
         throw new Error();
       }
     })
     .catch(function() {
       btn.disabled = false;
-      btn.textContent = 'Request Commercial Quote';
+      btn.textContent = submitLabel;
       errEl.style.display = 'block';
     });
   });
-})();
+}
+submitCommercialQuoteForm('commercial-quote-form', 'cqf-error', 'Request Commercial Quote');
+submitCommercialQuoteForm('commercial-quote-form-bottom', 'cqfb-error', 'Request Commercial Quote');
 </script>
 
 <script>
